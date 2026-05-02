@@ -2,15 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
 
-    <!-- Google verification -->
-    <meta name="google-site-verification" content="AnIzTxRd1hIqkuVRQDD9MP6WAYtnfOsuxf5FDjTpkek" />
-
     <meta charset="UTF-8">
+    <title>النائب أحمد ياسين حسن الدن | الموقع الرسمي</title>
 
-    <title>النائب أحمد ياسين حسن الدن | السيرة الذاتية والمعلومات الرسمية</title>
-
-    <meta name="description" content="الموقع الرسمي للنائب أحمد ياسين حسن الدن – منفلوط أسيوط. السيرة الذاتية، الأعمال، النشاط المجتمعي، وأهم المناصب التي شغلها.">
-
+    <meta name="description" content="الموقع الرسمي للنائب أحمد ياسين حسن الدن – السيرة الذاتية، الأعمال، النشاط المجتمعي، وأهم المناصب.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -38,11 +33,6 @@
             border-radius: 10px;
         }
 
-        .title-box {
-            display: flex;
-            flex-direction: column;
-        }
-
         .title-box h1 {
             margin: 0;
             font-size: 26px;
@@ -54,19 +44,32 @@
 
         .title-box span {
             font-size: 16px;
-            color: #00ff88;
+            color: #66ffcc; /* لون مختلف لكن قريب */
             font-weight: bold;
         }
 
         /* الهيرو */
         .hero {
             background: #0d1b24;
-            padding: 60px 20px;
-            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
             border-bottom: 2px solid #0f2a33;
         }
 
-        .hero h2 {
+        .hero img {
+            width: 330px;
+            border-radius: 10px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+            text-align: right;
+        }
+
+        .hero-text h2 {
             font-size: 36px;
             margin: 0;
             background: linear-gradient(45deg, #00e0ff, #00ff88);
@@ -74,29 +77,24 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .hero h3 {
+        .hero-text h3 {
             font-size: 22px;
             margin-top: 10px;
-            color: #00ff88;
+            color: #66ffcc;
             font-weight: bold;
         }
 
-        .hero p {
-            margin-top: 25px;
-            font-size: 19px;
+        .hero-text p {
+            margin-top: 20px;
+            font-size: 18px;
             line-height: 1.9;
             color: #d9faff;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
             white-space: pre-line;
         }
 
-        /* الأزرار */
         .btn-box {
-            margin-top: 30px;
+            margin-top: 25px;
             display: flex;
-            justify-content: center;
             gap: 15px;
         }
 
@@ -108,6 +106,17 @@
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+        }
+
+        .btn-empty {
+            background: transparent;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         /* أيقونات السوشيال */
@@ -123,7 +132,7 @@
         .social-icons a img {
             width: 45px;
             height: 45px;
-            filter: drop-shadow(0 0 5px #00ff88);
+            filter: none; /* إزالة الإضاءة */
         }
     </style>
 </head>
@@ -131,7 +140,7 @@
 
 <!-- الهيدر -->
 <div class="top-header">
-    <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/logo.png?raw=true" alt="Logo">
+    <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/logo.png?raw=true">
     <div class="title-box">
         <h1>النائب أحمد ياسين حسن</h1>
         <span>الموقع الرسمي</span>
@@ -140,28 +149,48 @@
 
 <!-- الهيرو -->
 <div class="hero">
-    <h2>النائب أحمد ياسين حسن</h2>
-    <h3>الموقع الرسمي</h3>
 
-    <p>
+    <!-- صورة الشخص -->
+    <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/person.jpeg?raw=true">
+
+    <!-- النص -->
+    <div class="hero-text">
+        <h2>النائب أحمد ياسين حسن</h2>
+        <h3>الموقع الرسمي</h3>
+
+        <p>
 أحمد ياسين حسن الدن
 أمين المجالس النيابية بالمحافظة – حزب حماة الوطن – أمانة أسيوط
-أمين التدريب والتثقيف بحزب حماة الوطن سابقًا
-أمين الشباب بالمحافظة – حزب مستقل وطن سابقًا
+أمين التدريب والتثقيف – حزب حماة الوطن سابقًا
+أمين الشباب بالمحافظة – حزب مستقبل وطن سابقًا
 حاصل على دورة استراتيجية الأمن القومي – أكاديمية ناصر العسكرية
-    </p>
+        </p>
 
-    <div class="btn-box">
-        <a href="#" class="btn">انضم إلينا الآن</a>
-        <a href="#" class="btn">تصفح أنشطتنا</a>
+        <div class="btn-box">
+            <a href="#" class="btn">انضم إلينا الآن</a>
+            <a class="btn-empty"></a>
+        </div>
     </div>
 </div>
 
 <!-- أيقونات السوشيال -->
 <div class="social-icons">
-    <a href="#"><img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/whatsapp1.png?raw=true"></a>
-    <a href="#"><img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/facebook.png?raw=true"></a>
-    <a href="#"><img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/call.png?raw=true"></a>
+
+    <!-- واتساب -->
+    <a href="https://wa.me/201066692844">
+        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/whatsapp.png?raw=true">
+    </a>
+
+    <!-- فيسبوك -->
+    <a href="https://www.facebook.com/share/1AJJm6q9b1/?mibextid=wwXIfr">
+        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/facebook.png?raw=true">
+    </a>
+
+    <!-- اتصال -->
+    <a href="tel:01066692844">
+        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/call.png?raw=true">
+    </a>
+
 </div>
 
 </body>
