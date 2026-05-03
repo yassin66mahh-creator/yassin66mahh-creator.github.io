@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+
         body {
             margin: 0;
             padding: 0;
@@ -17,7 +18,7 @@
             color: #fff;
         }
 
-        /* الهيدر الجديد (اسم + لوجو + خانات) */
+        /* الهيدر */
         .main-header {
             width: 100%;
             background: #0a0f14;
@@ -25,7 +26,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 12px 25px;
+            padding: 12px 20px;
             position: sticky;
             top: 0;
             z-index: 9999;
@@ -35,18 +36,18 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .header-left img {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 10px;
         }
 
         .header-left h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 22px;
             background: linear-gradient(45deg, #00e0ff, #00ff88);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -54,33 +55,40 @@
         }
 
         .header-left span {
-            font-size: 14px;
+            font-size: 13px;
             color: #66ffcc;
             font-weight: bold;
         }
 
-        /* الخمس خانات */
-        .top-menu {
-            display: flex;
-            gap: 22px;
-            padding: 8px 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            border: 1px solid #0f2a33;
-            margin-right: 60px; /* ← تحريك لليمين */
-        }
-
-        .top-menu a {
+        /* زر القائمة */
+        .menu-icon {
+            font-size: 32px;
+            cursor: pointer;
             color: #66ffcc;
-            font-size: 17px;
-            font-weight: bold;
-            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 6px;
             transition: 0.3s;
         }
 
-        .top-menu a:hover {
-            color: #00ff88;
-            transform: scale(1.1);
+        .menu-icon:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* القائمة المنسدلة */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #0a0f14;
+            border-top: 1px solid #0f2a33;
+            padding: 15px;
+        }
+
+        .mobile-menu a {
+            color: #66ffcc;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 0;
+            border-bottom: 1px solid #0f2a33;
         }
 
         /* الهيرو */
@@ -169,43 +177,21 @@
         .social-icons a img {
             width: 45px;
             height: 45px;
-            filter: none;
         }
 
-        /* موبايل */
-        @media (max-width: 850px) {
-            .main-header {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-
-            .top-menu {
-                margin-right: 0;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 10px 15px;
-                gap: 15px;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
-            .hero img {
-                width: 260px;
-            }
-        }
     </style>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
+
 </head>
 <body>
 
-<!-- الهيدر الجديد -->
+<!-- الهيدر -->
 <div class="main-header">
 
     <!-- لوجو + اسم -->
@@ -217,15 +203,18 @@
         </div>
     </div>
 
-    <!-- الخمس خانات -->
-    <nav class="top-menu">
-        <a href="#">الرئيسية</a>
-        <a href="#">السيرة الذاتية</a>
-        <a href="#">الأنشطة</a>
-        <a href="#">الأخبار</a>
-        <a href="#">تواصل معنا</a>
-    </nav>
+    <!-- زر القائمة -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
+</div>
+
+<!-- القائمة المنسدلة -->
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#">الرئيسية</a>
+    <a href="#">السيرة الذاتية</a>
+    <a href="#">الأنشطة</a>
+    <a href="#">الأخبار</a>
+    <a href="#">تواصل معنا</a>
 </div>
 
 <!-- الهيرو -->
