@@ -17,35 +17,70 @@
             color: #fff;
         }
 
-        /* الهيدر */
-        .top-header {
+        /* الهيدر الجديد (اسم + لوجو + خانات) */
+        .main-header {
+            width: 100%;
             background: #0a0f14;
-            padding: 15px;
+            border-bottom: 2px solid #0f2a33;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 25px;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        /* لوجو + اسم */
+        .header-left {
             display: flex;
             align-items: center;
             gap: 15px;
-            border-bottom: 2px solid #0f2a33;
         }
 
-        .top-header img {
-            width: 65px;
-            height: 65px;
+        .header-left img {
+            width: 60px;
+            height: 60px;
             border-radius: 10px;
         }
 
-        .title-box h1 {
+        .header-left h1 {
             margin: 0;
-            font-size: 26px;
+            font-size: 24px;
             background: linear-gradient(45deg, #00e0ff, #00ff88);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
         }
 
-        .title-box span {
-            font-size: 16px;
-            color: #66ffcc; /* اللون الجديد */
+        .header-left span {
+            font-size: 14px;
+            color: #66ffcc;
             font-weight: bold;
+        }
+
+        /* الخمس خانات */
+        .top-menu {
+            display: flex;
+            gap: 22px;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid #0f2a33;
+            margin-right: 60px; /* ← تحريك لليمين */
+        }
+
+        .top-menu a {
+            color: #66ffcc;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .top-menu a:hover {
+            color: #00ff88;
+            transform: scale(1.1);
         }
 
         /* الهيرو */
@@ -57,13 +92,13 @@
             justify-content: center;
             gap: 30px;
             border-bottom: 2px solid #0f2a33;
-            flex-wrap: wrap; /* مهم للموبايل */
+            flex-wrap: wrap;
         }
 
         .hero img {
             width: 330px;
             border-radius: 10px;
-            box-shadow: 0 0 25px rgba(0, 255, 180, 0.25); /* ضوء خفيف وناعم */
+            box-shadow: 0 0 25px rgba(0, 255, 180, 0.25);
         }
 
         .hero-text {
@@ -138,7 +173,21 @@
         }
 
         /* موبايل */
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
+            .main-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .top-menu {
+                margin-right: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px 15px;
+                gap: 15px;
+            }
+
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -146,11 +195,6 @@
 
             .hero-text {
                 text-align: center;
-            }
-
-            .social-icons {
-                left: 5px;
-                top: 30%;
             }
 
             .hero img {
@@ -161,22 +205,34 @@
 </head>
 <body>
 
-<!-- الهيدر -->
-<div class="top-header">
-    <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/logo.png?raw=true">
-    <div class="title-box">
-        <h1>النائب أحمد ياسين حسن</h1>
-        <span>الموقع الرسمي</span>
+<!-- الهيدر الجديد -->
+<div class="main-header">
+
+    <!-- لوجو + اسم -->
+    <div class="header-left">
+        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/logo.png?raw=true">
+        <div>
+            <h1>النائب أحمد ياسين حسن</h1>
+            <span>الموقع الرسمي</span>
+        </div>
     </div>
+
+    <!-- الخمس خانات -->
+    <nav class="top-menu">
+        <a href="#">الرئيسية</a>
+        <a href="#">السيرة الذاتية</a>
+        <a href="#">الأنشطة</a>
+        <a href="#">الأخبار</a>
+        <a href="#">تواصل معنا</a>
+    </nav>
+
 </div>
 
 <!-- الهيرو -->
 <div class="hero">
 
-    <!-- صورة الشخص -->
     <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/person.jpeg?raw=true">
 
-    <!-- النص -->
     <div class="hero-text">
         <h2>النائب أحمد ياسين حسن</h2>
         <h3>الموقع الرسمي</h3>
@@ -199,17 +255,14 @@
 <!-- أيقونات السوشيال -->
 <div class="social-icons">
 
-    <!-- واتساب -->
     <a href="https://wa.me/201066692844">
         <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/whatsapp.png?raw=true">
     </a>
 
-    <!-- فيسبوك -->
     <a href="https://www.facebook.com/share/1AJJm6q9b1/?mibextid=wwXIfr">
         <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/facebook.png?raw=true">
     </a>
 
-    <!-- اتصال -->
     <a href="tel:01066692844">
         <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/call.png?raw=true">
     </a>
