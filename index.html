@@ -164,6 +164,84 @@
             font-weight: bold;
         }
 
+        /* غلاف الإحصائيات + عنوان أهم إنجازاتي */
+        .stats-wrapper {
+            background: #0a0f14;
+            padding: 40px 0;
+            border-bottom: 2px solid #0f2a33;
+            text-align: center;
+        }
+
+        /* عنوان أهم إنجازاتي */
+        .achievements-title {
+            font-size: 34px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #00e0ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* قسم الإحصائيات */
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 10px 0;
+            margin-right: 40px; /* ← تحريك البوكسات شمال */
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #0f2a33;
+            border-radius: 12px;
+            padding: 20px 35px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stat-box h2 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00e0ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-box p {
+            margin-top: 8px;
+            font-size: 20px;
+            color: #66ffcc;
+            font-weight: bold;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 20px rgba(0,255,180,0.2);
+        }
+
+        /* موبايل */
+        @media (max-width: 768px) {
+
+            .achievements-title {
+                font-size: 28px;
+            }
+
+            .stats-section {
+                flex-direction: column;
+                align-items: center;
+                margin-right: 0;
+                gap: 15px;
+            }
+
+            .stat-box {
+                width: 70%;
+                padding: 18px 0;
+            }
+        }
+
         /* أيقونات السوشيال */
         .social-icons {
             position: fixed;
@@ -194,7 +272,6 @@
 <!-- الهيدر -->
 <div class="main-header">
 
-    <!-- لوجو + اسم -->
     <div class="header-left">
         <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/logo.png?raw=true">
         <div>
@@ -203,7 +280,6 @@
         </div>
     </div>
 
-    <!-- زر القائمة -->
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
 </div>
@@ -214,7 +290,7 @@
     <a href="#">السيرة الذاتية</a>
     <a href="#">الأنشطة</a>
     <a href="#">الأخبار</a>
-    <a href="#">تواصل معنا</a>
+    <a href="https://wa.me/201066692844">تواصل معنا</a>
 </div>
 
 <!-- الهيرو -->
@@ -235,10 +311,31 @@
         </p>
 
         <div class="btn-box">
-            <a href="#" class="btn">انضم إلينا الآن</a>
+            <a href="https://wa.me/201066692844" class="btn">تواصل معنا</a>
             <a href="#" class="btn-activities">تصفح أنشطتنا</a>
         </div>
     </div>
+</div>
+
+<!-- قسم الإحصائيات + عنوان أهم إنجازاتي -->
+<div class="stats-wrapper">
+
+    <h2 class="achievements-title">أهم إنجازاتي</h2>
+
+    <div class="stats-section">
+
+        <div class="stat-box">
+            <h2>6</h2>
+            <p>فعاليات</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>9</h2>
+            <p>اجتماعات</p>
+        </div>
+
+    </div>
+
 </div>
 
 <!-- أيقونات السوشيال -->
