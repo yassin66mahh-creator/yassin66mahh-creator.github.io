@@ -101,8 +101,10 @@ nav a:hover {
     background: #b8922f;
 }
 
+/* ---------------- HERO IMAGE FIXED ---------------- */
+
 .hero-img {
-    width: 230px !important;   
+    width: 260px !important;
     max-width: 100% !important;
     height: auto !important;
     border-radius: 12px;
@@ -274,4 +276,43 @@ nav a:hover {
 .credit-logo {
     height: 40px;
     margin-bottom: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-sub {
+        font-size: 16px;
+    }
+
+    .hero-img {
+        width: 180px !important;
+    }
+
+    .steps-grid,
+    .nav-grid,
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-box,
+    .nav-box {
+        width: 100%;
+    }
 }
