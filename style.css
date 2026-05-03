@@ -104,7 +104,7 @@ nav a:hover {
 /* ---------------- HERO IMAGE FIXED ---------------- */
 
 .hero-img {
-    width: 230px !important;
+    width: 260px !important;
     max-width: 100% !important;
     height: auto !important;
     border-radius: 12px;
@@ -204,76 +204,35 @@ nav a:hover {
     color: #fff;
 }
 
-/* ---------------- JOIN FORM – PREMIUM DESIGN ---------------- */
+/* ---------------- JOIN US ---------------- */
 
 .join-us {
-    background: #f4f6fa;
-    padding: 100px 0;
+    background: #f5f7fa;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .join-box {
     background: #ffffff;
-    border: 3px solid #0b3d91;
-    border-radius: 18px;
-    padding: 50px 45px;
-    width: 90%;
-    max-width: 750px;
+    padding: 40px 20px;
+    max-width: 600px;
     margin: auto;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.18);
-    transition: 0.3s;
-}
-
-.join-box:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 45px rgba(0,0,0,0.25);
-}
-
-.join-box h2 {
-    font-size: 38px;
-    color: #0b3d91;
-    margin-bottom: 10px;
-}
-
-.join-box p {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-.join-box input,
-.join-box textarea {
-    width: 100%;
-    padding: 18px;
-    margin-bottom: 20px;
     border-radius: 12px;
-    border: 2px solid #0b3d91;
-    font-size: 18px;
-    background: #f7f9fc;
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.join-box input:focus,
-.join-box textarea:focus {
-    border-color: #d4af37;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(212,175,55,0.4);
-}
-
-.join-box button {
+.join-btn {
+    display: inline-block;
     background: #0b3d91;
     color: #fff;
-    padding: 18px 40px;
-    border: none;
-    border-radius: 12px;
-    font-size: 22px;
-    cursor: pointer;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
     transition: 0.3s;
-    font-weight: 600;
 }
 
-.join-box button:hover {
+.join-btn:hover {
     background: #082c6c;
-    transform: scale(1.07);
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -342,7 +301,7 @@ nav a:hover {
     }
 
     .hero-img {
-        width: 160px !important;
+        width: 180px !important;
     }
 
     .steps-grid,
@@ -355,22 +314,5 @@ nav a:hover {
     .step-box,
     .nav-box {
         width: 100%;
-    }
-
-    .join-box {
-        padding: 35px 25px;
-    }
-
-    .join-box h2 {
-        font-size: 30px;
-    }
-
-    .join-box p {
-        font-size: 17px;
-    }
-
-    .join-box button {
-        width: 100%;
-        padding: 15px;
     }
 }
