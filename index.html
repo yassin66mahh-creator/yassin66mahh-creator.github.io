@@ -34,17 +34,17 @@
                 <h1>النائب أحمد ياسين حسن</h1>
 
                 <p class="hero-sub">
-                      امين المجالس النيابية بالمحافظة حزب حماة الوطن أمانة أسيوط
+                    عضو مجلس النواب المصري  
                     <br>
-                      امين التدريب والتثقيف بحزب حماة الوطن سابقا
+                    أمين المجالس النيابية بالمحافظة  
                     <br>
-                   حاصل على دورة استراتيجية الأمن القومي اكاديمية ناصر العسكرية
+                    حزب حماة الوطن – أمانة مركز منقباد
                 </p>
 
-                <a href="#sections" class="hero-btn">آخر الأحداث</a>
+                <a onclick="openPopup()" class="hero-btn">انضم الآن</a>
             </div>
 
-            <img src="person.jpeg" class="person-img">
+            <img src="hero.jpg" class="hero-img">
         </div>
     </section>
 
@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <!-- Sections Navigation (THE SECTION YOU WANT LINKS TO SCROLL TO) -->
+    <!-- Sections Navigation -->
     <section class="sections-nav" id="sections">
         <div class="container nav-grid">
 
@@ -126,9 +126,32 @@
         <div class="join-box">
             <h2>انضم إلينا</h2>
             <p>كن جزءًا من فريق العمل وشارك في خدمة المجتمع.</p>
-            <a href="#footer" class="join-btn">انضم الآن</a>
+            <a onclick="openPopup()" class="join-btn">انضم الآن</a>
         </div>
     </section>
+
+    <!-- Popup Join Form -->
+    <div class="join-popup" id="joinPopup">
+        <div class="join-popup-box">
+
+            <h2>انضم إلينا</h2>
+            <p>من فضلك املأ البيانات التالية</p>
+
+            <form action="https://formsubmit.co/Ahmedyasseinhassan@gmail.com" method="POST">
+
+                <input type="text" name="name" placeholder="الاسم بالكامل" required>
+                <input type="text" name="phone" placeholder="رقم الهاتف" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <textarea name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+
+                <button type="submit" class="send-btn">إرسال</button>
+
+            </form>
+
+            <span class="close-popup" onclick="closePopup()">✖</span>
+
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer" id="footer">
@@ -151,9 +174,22 @@
 
     <!-- Credit Bar -->
     <div class="credit-bar">
-        <img src="yassinlogo.png" class="credit-logo">
-        <p>programed by <strong style="color:#ff0000;">YASSIN EL DEN</strong> </p>
+        <img src="logo.png" class="credit-logo">
+        <p>تم برمجة هذا الموقع بواسطة 
+            <strong style="color:#ff0000;">ياسين الدن</strong>
+        </p>
     </div>
+
+    <!-- Popup Script -->
+    <script>
+        function openPopup() {
+            document.getElementById("joinPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("joinPopup").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
