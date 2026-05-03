@@ -41,7 +41,7 @@
                     حزب حماة الوطن – أمانة مركز منقباد
                 </p>
 
-                <a onclick="openPopup()" class="hero-btn">انضم الآن</a>
+                <a href="#joinForm" class="hero-btn">انضم الآن</a>
             </div>
 
             <img src="hero.jpg" class="hero-img">
@@ -121,37 +121,31 @@
         </div>
     </section>
 
-    <!-- Join Us Section -->
-    <section class="join-us" id="join">
-        <div class="join-box">
-            <h2>انضم إلينا</h2>
-            <p>كن جزءًا من فريق العمل وشارك في خدمة المجتمع.</p>
-            <a onclick="openPopup()" class="join-btn">انضم الآن</a>
-        </div>
-    </section>
+    <!-- JOIN FORM (BIG SECTION) -->
+    <section class="join-us" id="joinForm">
+        <div class="join-box" style="max-width:700px; text-align:center;">
 
-    <!-- Popup Join Form -->
-    <div class="join-popup" id="joinPopup">
-        <div class="join-popup-box">
-
-            <h2>انضم إلينا</h2>
-            <p>من فضلك املأ البيانات التالية</p>
+            <h2 style="font-size:32px; margin-bottom:10px;">انضم إلينا</h2>
+            <p style="font-size:18px; margin-bottom:25px;">
+                كن جزءًا من فريق العمل وساهم في خدمة المجتمع
+            </p>
 
             <form action="https://formsubmit.co/Ahmedyasseinhassan@gmail.com" method="POST">
 
-                <input type="text" name="name" placeholder="الاسم بالكامل" required>
-                <input type="text" name="phone" placeholder="رقم الهاتف" required>
-                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                <textarea name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+                <input type="text" name="name" placeholder="الاسم بالكامل" required style="width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:2px solid #0b3d91;">
 
-                <button type="submit" class="send-btn">إرسال</button>
+                <input type="text" name="phone" placeholder="رقم الهاتف" required style="width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:2px solid #0b3d91;">
+
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required style="width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:2px solid #0b3d91;">
+
+                <textarea name="message" placeholder="اكتب رسالتك هنا" required style="width:100%; height:150px; padding:15px; border-radius:8px; border:2px solid #0b3d91;"></textarea>
+
+                <button type="submit" class="join-btn" style="margin-top:20px;">إرسال</button>
 
             </form>
 
-            <span class="close-popup" onclick="closePopup()">✖</span>
-
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer" id="footer">
@@ -179,17 +173,6 @@
             <strong style="color:#ff0000;">ياسين الدن</strong>
         </p>
     </div>
-
-    <!-- Popup Script -->
-    <script>
-        function openPopup() {
-            document.getElementById("joinPopup").style.display = "flex";
-        }
-
-        function closePopup() {
-            document.getElementById("joinPopup").style.display = "none";
-        }
-    </script>
 
 </body>
 </html>
