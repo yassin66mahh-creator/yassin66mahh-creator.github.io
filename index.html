@@ -3,9 +3,9 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>النائب أحمد ياسين حسن الدن | الموقع الرسمي</title>
+    <title>النائب أحمد ياسين حسن | الموقع الرسمي</title>
 
-    <meta name="description" content="الموقع الرسمي للنائب أحمد ياسين حسن الدن – السيرة الذاتية، الأعمال، النشاط المجتمعي، وأهم المناصب.">
+    <meta name="description" content="الموقع الرسمي للنائب أحمد ياسين حسن – العمل البرلماني، النشاط المجتمعي، الفعاليات، الندوات، والتكريمات.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -16,6 +16,7 @@
             font-family: "Cairo", sans-serif;
             background: #000;
             color: #fff;
+            scroll-behavior: smooth;
         }
 
         /* الهيدر */
@@ -32,7 +33,6 @@
             z-index: 9999;
         }
 
-        /* لوجو + اسم */
         .header-left {
             display: flex;
             align-items: center;
@@ -60,7 +60,6 @@
             font-weight: bold;
         }
 
-        /* زر القائمة */
         .menu-icon {
             font-size: 32px;
             cursor: pointer;
@@ -74,7 +73,6 @@
             background: rgba(255,255,255,0.08);
         }
 
-        /* القائمة المنسدلة */
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -94,11 +92,11 @@
         /* الهيرو */
         .hero {
             background: #0d1b24;
-            padding: 40px 20px;
+            padding: 50px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             border-bottom: 2px solid #0f2a33;
             flex-wrap: wrap;
         }
@@ -110,12 +108,12 @@
         }
 
         .hero-text {
-            max-width: 500px;
+            max-width: 520px;
             text-align: right;
         }
 
         .hero-text h2 {
-            font-size: 36px;
+            font-size: 38px;
             margin: 0;
             background: linear-gradient(45deg, #00e0ff, #00ff88);
             -webkit-background-clip: text;
@@ -164,7 +162,79 @@
             font-weight: bold;
         }
 
-        /* غلاف الإحصائيات + عنوان أهم إنجازاتي */
+        /* قسم من نحن */
+        .about-section {
+            background: #0a0f14;
+            padding: 60px 20px;
+            border-bottom: 2px solid #0f2a33;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 34px;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #00e0ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-section p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #d9faff;
+        }
+
+        /* قسم الرؤية */
+        .vision-section {
+            background: #0d1b24;
+            padding: 60px 20px;
+            border-bottom: 2px solid #0f2a33;
+            text-align: center;
+        }
+
+        .vision-section h2 {
+            font-size: 34px;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #00e0ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .vision-section p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #d9faff;
+        }
+
+        /* قسم الرسالة */
+        .mission-section {
+            background: #0a0f14;
+            padding: 60px 20px;
+            border-bottom: 2px solid #0f2a33;
+            text-align: center;
+        }
+
+        .mission-section h2 {
+            font-size: 34px;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #00e0ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .mission-section p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #d9faff;
+        }
+
+        /* الإحصائيات */
         .stats-wrapper {
             background: #0a0f14;
             padding: 40px 0;
@@ -172,7 +242,6 @@
             text-align: center;
         }
 
-        /* عنوان أهم إنجازاتي */
         .achievements-title {
             font-size: 34px;
             margin-bottom: 25px;
@@ -183,13 +252,12 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* قسم الإحصائيات */
         .stats-section {
             display: flex;
             justify-content: center;
             gap: 25px;
             padding: 10px 0;
-            margin-right: 40px; /* ← تحريك البوكسات شمال */
+            margin-right: 40px;
         }
 
         .stat-box {
@@ -222,26 +290,6 @@
             box-shadow: 0 0 20px rgba(0,255,180,0.2);
         }
 
-        /* موبايل */
-        @media (max-width: 768px) {
-
-            .achievements-title {
-                font-size: 28px;
-            }
-
-            .stats-section {
-                flex-direction: column;
-                align-items: center;
-                margin-right: 0;
-                gap: 15px;
-            }
-
-            .stat-box {
-                width: 70%;
-                padding: 18px 0;
-            }
-        }
-
         /* أيقونات السوشيال */
         .social-icons {
             position: fixed;
@@ -259,13 +307,6 @@
 
     </style>
 
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("mobileMenu");
-            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-        }
-    </script>
-
 </head>
 <body>
 
@@ -273,7 +314,7 @@
 <div class="main-header">
 
     <div class="header-left">
-        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/logo.png?raw=true">
+        <img src="https://raw.githubusercontent.com/yassin66mahh-creator/yassin66mahh-creator.github.io/main/logo.png">
         <div>
             <h1>النائب أحمد ياسين حسن</h1>
             <span>الموقع الرسمي</span>
@@ -286,74 +327,525 @@
 
 <!-- القائمة المنسدلة -->
 <div id="mobileMenu" class="mobile-menu">
-    <a href="#">الرئيسية</a>
-    <a href="#">السيرة الذاتية</a>
-    <a href="#">الأنشطة</a>
-    <a href="#">الأخبار</a>
-    <a href="https://wa.me/201066692844">تواصل معنا</a>
+    <a href="#home">الرئيسية</a>
+    <a href="#services">خدماتنا</a> 
+    <a href="#activities">الأنشطة</a>
+    <a href="#news">الأخبار</a>
+    <a href="#footer">تواصل معنا</a>
 </div>
 
 <!-- الهيرو -->
-<div class="hero">
+<div id="home" class="hero">
 
-    <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/person.jpeg?raw=true">
+    <img src="https://raw.githubusercontent.com/yassin66mahh-creator/yassin66mahh-creator.github.io/main/person.jpeg">
 
     <div class="hero-text">
         <h2>النائب أحمد ياسين حسن</h2>
-        <h3>الموقع الرسمي</h3>
+        <h3>العمل البرلماني والمجتمعي</h3>
 
         <p>
-أحمد ياسين حسن الدن
-أمين المجالس النيابية بالمحافظة – حزب حماة الوطن – أمانة أسيوط
-أمين التدريب والتثقيف – حزب حماة الوطن سابقًا
-أمين الشباب بالمحافظة – حزب مستقبل وطن سابقًا
-حاصل على دورة استراتيجية الأمن القومي – أكاديمية ناصر العسكرية
+نائب برلماني وقيادي حزبي يجمع بين العمل الوطني، المجتمعي، والتنظيمي.
+مشارك في الفعاليات الرسمية، الندوات التثقيفية، الاجتماعات التنظيمية،
+والتكريمات التي تعكس دوره الفعّال في خدمة المواطنين.
         </p>
 
         <div class="btn-box">
-            <a href="https://wa.me/201066692844" class="btn">تواصل معنا</a>
-            <a href="#" class="btn-activities">تصفح أنشطتنا</a>
+            <a href="#footer" class="btn">تواصل معنا</a>
+            <a href="#activities" class="btn-activities">تصفح الأنشطة</a>
         </div>
     </div>
 </div>
 
-<!-- قسم الإحصائيات + عنوان أهم إنجازاتي -->
-<div class="stats-wrapper">
+<!-- قسم من نحن -->
+<section class="about-section">
+    <h2>من نحن</h2>
+    <p>
+        يمثل النائب أحمد ياسين حسن نموذجًا للشخصية العامة التي تجمع بين العمل البرلماني،
+        النشاط المجتمعي، والدور التنظيمي داخل حزب حماة الوطن. من خلال مشاركته في الفعاليات
+        الرسمية والاجتماعات والندوات، يسعى دائمًا لتعزيز دور الشباب ودعم المواطنين.
+    </p>
+</section>
 
-    <h2 class="achievements-title">أهم إنجازاتي</h2>
+<!-- قسم الرؤية -->
+<section class="vision-section">
+    <h2>رؤيتي</h2>
+    <p>
+        العمل على تعزيز المشاركة المجتمعية، دعم المبادرات الوطنية، وتطوير آليات التواصل
+        بين المواطنين ومؤسسات الدولة، بما يحقق تنمية حقيقية على أرض الواقع.
+    </p>
+</section>
 
-    <div class="stats-section">
+<!-- قسم الرسالة -->
+<section class="mission-section">
+    <h2>رسالتي</h2>
+    <p>
+        خدمة المواطنين، دعم الشباب، والمساهمة في بناء مجتمع واعٍ قادر على مواجهة التحديات،
+        من خلال العمل البرلماني، المجتمعي، والتنظيمي.
+    </p>
+</section>
 
-        <div class="stat-box">
-            <h2>6</h2>
-            <p>فعاليات</p>
+
+<!-- قسم الأنشطة -->
+<section id="activities" class="activities-section">
+
+    <h2 class="section-title">الأنشطة والفعاليات</h2>
+
+    <p class="section-desc">
+        يعرض هذا القسم أبرز الفعاليات، الاجتماعات، الندوات، والتكريمات التي شارك فيها النائب أحمد ياسين حسن
+        ضمن دوره البرلماني والحزبي والمجتمعي، والتي تعكس حضوره الفعّال في مختلف المناسبات الرسمية والتنظيمية.
+    </p>
+
+    <div class="activities-grid">
+
+        <div class="activity-card">
+            <img src="activity1.jpeg">
+            <h3>مشاركة في احتفالية رسمية</h3>
+            <p>حضور فعالية وطنية بحضور قيادات تنفيذية وشخصيات عامة ضمن إطار دعم العمل الوطني.</p>
         </div>
 
-        <div class="stat-box">
-            <h2>9</h2>
-            <p>اجتماعات</p>
+        <div class="activity-card">
+            <img src="activity2.jpeg">
+            <h3>اجتماع تنظيمي بحزب حماة الوطن</h3>
+            <p>مناقشة خطط العمل التنظيمي وتعزيز دور الأمانات في خدمة المواطنين.</p>
+        </div>
+
+        <div class="activity-card">
+            <img src="activity3.jpeg">
+            <h3>تكريم رسمي</h3>
+            <p>استلام درع تقدير عن الجهود المبذولة في العمل المجتمعي والتنظيمي.</p>
+        </div>
+
+        <div class="activity-card">
+            <img src="activity4.jpeg">
+            <h3>ندوة تثقيفية</h3>
+            <p>المشاركة في ندوة تثقيفية حول دور الشباب والعمل الوطني.</p>
         </div>
 
     </div>
 
+</section>
+
+<!-- قسم الخدمات -->
+<section id="services" class="services-section">
+
+    <h2 class="section-title">خدماتنا</h2>
+
+    <p class="section-desc">
+        يقدم النائب أحمد ياسين حسن مجموعة من الخدمات المجتمعية والتنظيمية التي تهدف إلى دعم المواطنين
+        وتعزيز التواصل الفعّال بين المجتمع ومؤسسات الدولة.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <img src="service1.jpeg">
+            <h3>خدمة المواطنين</h3>
+            <p>استقبال الطلبات والشكاوى والعمل على حلها بالتنسيق مع الجهات المختصة.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="service2.jpeg">
+            <h3>الفعاليات المجتمعية</h3>
+            <p>تنظيم فعاليات ولقاءات تهدف إلى دعم المجتمع وتعزيز الوعي الوطني.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="service3.jpeg">
+            <h3>الدعم التنظيمي</h3>
+            <p>المساهمة في تطوير العمل الحزبي والتدريب والتثقيف داخل الأمانات.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- قسم المعرض -->
+<section id="gallery" class="gallery-section">
+
+    <h2 class="section-title">معرض الصور</h2>
+
+    <p class="section-desc">
+        مجموعة من الصور التي توثق حضور النائب أحمد ياسين حسن في مختلف الفعاليات الرسمية والتنظيمية.
+    </p>
+
+    <div class="gallery-grid">
+
+        <img src="gallery1.jpeg">
+        <img src="gallery2.jpeg">
+        <img src="gallery3.jpeg">
+        <img src="gallery4.jpeg">
+        <img src="gallery5.jpeg">
+        <img src="gallery6.jpeg">
+        <img src="gallery7.jpeg">
+        <img src="gallery8.jpeg">
+        <img src="gallery9.jpeg">
+        <img src="gallery10.jpeg">
+
+    </div>
+
+</section>
+
+<!-- قسم الأخبار -->
+<section id="news" class="news-section">
+
+    <h2 class="section-title">آخر الأخبار</h2>
+
+    <p class="section-desc">
+        أحدث المستجدات والأنشطة التي قام بها النائب أحمد ياسين حسن في إطار عمله البرلماني والمجتمعي.
+    </p>
+
+    <div class="news-grid">
+
+        <div class="news-card">
+            <img src="activity5.jpeg">
+            <h3>اجتماع رسمي لمناقشة ملفات خدمية</h3>
+            <p>عقد اجتماع موسع لمتابعة احتياجات المواطنين والعمل على تطوير الخدمات المقدمة.</p>
+        </div>
+
+        <div class="news-card">
+            <img src="activity6.jpeg">
+            <h3>مشاركة في احتفال عيد العمال</h3>
+            <p>حضور احتفالية رسمية بمشاركة قيادات حزبية وتنفيذية احتفالًا بعيد العمال.</p>
+        </div>
+
+        <div class="news-card">
+            <img src="activity7.jpeg">
+            <h3>تكريم قيادات وشخصيات عامة</h3>
+            <p>تسليم شهادات تقدير لعدد من الشخصيات تقديرًا لجهودهم في خدمة المجتمع.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+    /* وصف الأقسام */
+    .section-desc {
+        max-width: 850px;
+        margin: auto;
+        margin-top: -10px;
+        margin-bottom: 40px;
+        font-size: 17px;
+        color: #d9faff;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    /* الأنشطة */
+    .activities-section {
+        background: #0d1b24;
+        padding: 60px 20px;
+        border-bottom: 2px solid #0f2a33;
+    }
+
+    .activities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .activity-card {
+        background: #0a0f14;
+        border: 1px solid #0f2a33;
+        border-radius: 12px;
+        padding: 20px;
+        transition: 0.3s;
+        box-shadow: 0 0 20px rgba(0,255,180,0.15);
+    }
+
+    .activity-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 0 25px rgba(0,255,180,0.25);
+    }
+
+    .activity-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .activity-card h3 {
+        font-size: 20px;
+        color: #66ffcc;
+        margin-bottom: 10px;
+    }
+
+    .activity-card p {
+        font-size: 16px;
+        color: #d9faff;
+        line-height: 1.7;
+    }
+
+    /* الخدمات */
+    .services-section {
+        background: #0a0f14;
+        padding: 60px 20px;
+        border-bottom: 2px solid #0f2a33;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .service-card {
+        background: #0d1b24;
+        border: 1px solid #0f2a33;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 0 25px rgba(0,255,180,0.25);
+    }
+
+    .service-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        color: #66ffcc;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        color: #d9faff;
+        line-height: 1.7;
+    }
+
+    /* المعرض */
+    .gallery-section {
+        background: #0d1b24;
+        padding: 60px 20px;
+        border-bottom: 2px solid #0f2a33;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0,255,180,0.25);
+    }
+
+    /* الأخبار */
+    .news-section {
+        background: #0a0f14;
+        padding: 60px 20px;
+        border-bottom: 2px solid #0f2a33;
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .news-card {
+        background: #0d1b24;
+        border: 1px solid #0f2a33;
+        border-radius: 12px;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .news-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 0 25px rgba(0,255,180,0.25);
+    }
+
+    .news-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .news-card h3 {
+        font-size: 20px;
+        color: #66ffcc;
+        margin-bottom: 10px;
+    }
+
+    .news-card p {
+        font-size: 16px;
+        color: #d9faff;
+        line-height: 1.7;
+    }
+
+</style>
+
+
+<!-- الفوتر -->
+<footer id="footer" class="footer">
+
+    <div class="footer-content">
+
+        <h3>النائب أحمد ياسين حسن</h3>
+
+        <p>
+            نائب برلماني وقيادي حزبي يجمع بين العمل الوطني، المجتمعي، والتنظيمي.
+            يسعى دائمًا لخدمة المواطنين وتعزيز دور الشباب والمشاركة المجتمعية
+            من خلال الفعاليات، الندوات، الاجتماعات، والتكريمات الرسمية.
+        </p>
+
+        <div class="footer-social">
+            <a href="https://wa.me/201066692844">
+                <img src="https://raw.githubusercontent.com/yassin66mahh-creator/yassin66mahh-creator.github.io/main/whatsapp.png">
+            </a>
+
+            <a href="https://www.facebook.com/share/1AJJm6q9b1/?mibextid=wwXIfr">
+                <img src="https://raw.githubusercontent.com/yassin66mahh-creator/yassin66mahh-creator.github.io/main/facebook.png">
+            </a>
+
+            <a href="tel:01066692844">
+                <img src="https://raw.githubusercontent.com/yassin66mahh-creator/yassin66mahh-creator.github.io/main/call.png">
+            </a>
+        </div>
+
+        <p class="copy">© 2026 جميع الحقوق محفوظة</p>
+
+    </div>
+
+</footer>
+
+<style>
+
+    /* الفوتر */
+    .footer {
+        background: #0d1b24;
+        padding: 50px 20px;
+        text-align: center;
+        border-top: 2px solid #0f2a33;
+    }
+
+    .footer h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        background: linear-gradient(45deg, #00e0ff, #00ff88);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .footer p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 16px;
+        color: #d9faff;
+        line-height: 1.8;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-social img {
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+    }
+
+    .footer-social img:hover {
+        transform: scale(1.15);
+    }
+
+    .copy {
+        margin-top: 25px;
+        font-size: 14px;
+        color: #66ffcc;
+    }
+
+    /* موبايل */
+    @media (max-width: 768px) {
+
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .stats-section {
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0;
+            gap: 15px;
+        }
+
+        .stat-box {
+            width: 70%;
+            padding: 18px 0;
+        }
+
+        .footer p {
+            padding: 0 10px;
+        }
+    }
+
+</style>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("mobileMenu");
+        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+</script>
+
+<!-- شريط برمجة الموقع -->
+<div class="dev-bar">
+    <img src=yassinlogo.png" class="dev-logo">
+    <p>programed by <span>YASSIN EL DEN</span></span></p>
 </div>
 
-<!-- أيقونات السوشيال -->
-<div class="social-icons">
+<style>
+.dev-bar {
+    background: #050b10;
+    padding: 25px 10px;
+    text-align: center;
+    border-top: 1px solid #0f2a33;
+}
 
-    <a href="https://wa.me/201066692844">
-        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/whatsapp.png?raw=true">
-    </a>
+.dev-bar .dev-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 
-    <a href="https://www.facebook.com/share/1AJJm6q9b1/?mibextid=wwXIfr">
-        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/facebook.png?raw=true">
-    </a>
+.dev-bar p {
+    color: #d9faff;
+    font-size: 17px;
+    margin: 0;
+}
 
-    <a href="tel:01066692844">
-        <img src="https://github.com/yassin66mahh-creator/yassin66mahh-creator.github.io/blob/main/call.png?raw=true">
-    </a>
-
-</div>
+.dev-bar p span {
+    color: #00ff88; /* اللون المختلف */
+    font-weight: bold;
+    font-size: 18px;
+}
+</style>
 
 </body>
 </html>
