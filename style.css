@@ -316,3 +316,53 @@ nav a:hover {
         width: 100%;
     }
 }
+
+/* Floating Side Icons EXACT LIKE THE IMAGE */
+.side-icons {
+    position: fixed;
+    right: 15px;
+    top: 45%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 99999;
+}
+
+/* Circle background */
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* Colors EXACT like the image */
+.icon-circle.green {
+    background: #25D366; /* WhatsApp green */
+}
+
+.icon-circle.blue {
+    background: #1877F2; /* Facebook blue */
+}
+
+.icon-circle.red {
+    background: #E53935; /* Call red */
+}
+
+/* Icon inside circle */
+.icon-circle img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* makes icons white */
+}
+
+/* Hover effect */
+.icon-circle:hover {
+    transform: scale(1.1);
+}
