@@ -282,6 +282,27 @@ nav a:hover {
 
 @media (max-width: 768px) {
 
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    .header-content,
+    .hero-content,
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
     .hero {
         padding: 40px 0;
         text-align: center;
