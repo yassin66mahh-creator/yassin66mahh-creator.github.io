@@ -7,6 +7,10 @@ body {
     color: #0b3d91;
 }
 
+.about-box p {
+    text-align: justify;
+}
+
 /* الحاوية الأساسية */
 .container {
     width: 90%;
