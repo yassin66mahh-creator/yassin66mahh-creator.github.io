@@ -329,13 +329,13 @@ nav a:hover {
 }
 
 .credit-logo {
-    height: 60px; /* أكبر شوية */
+    height: 70px; /* أكبر شوية */
     margin: 0;
 }
 
 .yassin-red {
     color: #b30000; /* أحمر */
-    font-size: 20px; /* أكبر شوية لو حابب */
+    font-size: 30px; /* أكبر شوية لو حابب */
     font-weight: bold;
 }
 
