@@ -317,10 +317,32 @@ nav a:hover {
     }
 }
 
-/* Floating Side Icons EXACT LIKE THE IMAGE */
-.side-icons {
+/* Credit Bar تعديل */
+.credit-bar {
+    background: #082c6c;
+    color: #fff;
+    padding: 15px;
+    display: flex;              /* يخلي العناصر جنب بعض */
+    align-items: center;        /* يظبطهم في النص عمودي */
+    justify-content: center;    /* يخليهم في النص أفقي */
+    gap: 15px;                  /* مسافة بين اللوجو والكلمة */
+}
+
+.credit-logo {
+    height: 60px; /* أكبر شوية */
+    margin: 0;
+}
+
+.yassin-red {
+    color: #b30000; /* أحمر */
+    font-size: 20px; /* أكبر شوية لو حابب */
+    font-weight: bold;
+}
+
+/* Floating Side Icons Left */
+.side-icons-left {
     position: fixed;
-    right: 15px;
+    left: 15px;              /* على الشمال */
     top: 45%;
     transform: translateY(-50%);
     display: flex;
@@ -329,7 +351,7 @@ nav a:hover {
     z-index: 99999;
 }
 
-/* Circle background */
+/* شكل الدواير */
 .icon-circle {
     width: 55px;
     height: 55px;
@@ -342,27 +364,17 @@ nav a:hover {
     transition: 0.25s;
 }
 
-/* Colors EXACT like the image */
-.icon-circle.green {
-    background: #25D366; /* WhatsApp green */
-}
+/* ألوان مناسبة للموقع */
+.icon-circle.green { background: #25D366; }   /* واتس */
+.icon-circle.blue { background: #1877F2; }    /* فيس */
+.icon-circle.red { background: #E53935; }     /* كول */
 
-.icon-circle.blue {
-    background: #1877F2; /* Facebook blue */
-}
-
-.icon-circle.red {
-    background: #E53935; /* Call red */
-}
-
-/* Icon inside circle */
 .icon-circle img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1); /* makes icons white */
+    filter: brightness(0) invert(1); /* يخلي الأيقونة بيضاء */
 }
 
-/* Hover effect */
 .icon-circle:hover {
     transform: scale(1.1);
 }
