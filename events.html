@@ -1,212 +1,141 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اخر الاحداث</title>
+  <title> اخر الاحداث </title>
+
   <style>
     body {
-      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
-      background: #f4f6fa;
-    }
-    header {
-      background: #0b3d91;
-      color: #fff;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-    }
-    .contact-btn {
-      background: #fff;
-      color: #0b3d91;
-      padding: 6px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .mobile-menu-icon {
-      display: none;
-      font-size: 20px;
-      cursor: pointer;
-      color: #0b3d91;
-      padding: 6px 10px;
-      border-radius: 6px;
-      background: rgba(240,240,240,0.8);
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-    .mobile-menu-icon:hover {
-      background: #d4af37;
-      color: #fff;
-      transform: scale(1.05);
-    }
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        padding: 15px;
-      }
-      nav.show {
-        display: flex;
-      }
-      .mobile-menu-icon {
-        display: inline-block;
-      }
+      padding: 0;
+      color: #222;
     }
 
-    /* Section */
-    .page-section {
-      padding: 50px 20px;
+    /* الهيدر */
+    .main-header {
+      background: linear-gradient(90deg, #000, #0044cc, #009933);
+      color: #fff;
       text-align: center;
+      padding: 50px 20px;
     }
-    .section-title {
-      font-size: 32px;
-      color: #0b3d91;
-      margin-bottom: 40px;
-      position: relative;
+    .main-header h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-    .section-title::after {
-      content: "";
-      width: 80px;
-      height: 4px;
-      background: #d4af37;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 2px;
+    .main-header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
     }
 
-    /* Grid */
-    .grid-3 {
+    /* قسم الأحداث */
+    .events-section {
+      padding: 50px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
-    @media (max-width: 768px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-    }
 
-    /* Card */
-    .card {
+    .event-card {
       background: #fff;
       border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
       overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      transition: 0.4s;
-      position: relative;
+      transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .card-body {
-      padding: 20px;
-    }
-    .card-body h3 {
-      margin: 0 0 12px;
-      color: #0b3d91;
-      font-size: 22px;
-    }
-    .card-body p {
-      color: #444;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    .btn-green {
-      display: inline-block;
-      background: #28a745;
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .btn-green:hover {
-      background: #218838;
+    .event-card:hover {
+      transform: translateY(-8px);
     }
 
+    .event-content {
+      padding: 20px;
+    }
+    .event-title {
+      font-size: 1.8rem;
+      margin: 0 0 10px;
+      color: #0044cc;
+    }
+    .event-desc {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* معرض الصور داخل كل حدث */
+    .event-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+    }
+    .event-gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    /* الفوتر */
     footer {
-      background: #0b3d91;
+      background: #000;
       color: #fff;
       text-align: center;
-      padding: 20px;
-      margin-top: 50px;
+      padding: 25px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div>
-    <img src="logo.png" class="logo" style="height:40px;">
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="events.html">آخر الأحداث</a>
-    <a href="activities.html">الأنشطة</a>
-    <a href="news.html">الأخبار</a>
-  </nav>
-  <a href="#footer" class="contact-btn">تواصل معنا</a>
-  <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
-</header>
+  <!-- هيدر -->
+  <header class="main-header">
+    <h1> اخر الاحداث </h1>
+    <p> تابع اخر و اهم الاحداث </p>
+  </header>
 
-<section class="page-section">
-  <h2 class="section-title">آخر الأحداث</h2>
-  <div class="grid-3">
-    <div class="card">
-      <img src="event1.jpeg" alt="حدث 1">
-      <div class="card-body">
-        <h3>عنوان الحدث الأول</h3>
-        <p>تفاصيل مختصرة عن الحدث الأول بشكل أنيق وجذاب.</p>
+  <!-- قسم الأحداث -->
+  <section class="events-section">
+
+    <!-- حدث 1 -->
+    <div class="event-card">
+      <div class="event-content">
+        <h2 class="event-title">عنوان الحدث الأول</h2>
+        <p class="event-desc">وصف قصير للحدث الأول... هنا تقدر تضيف تفاصيل عن النشاط أو الفعالية.</p>
+      </div>
+      <div class="event-gallery">
+        <img src="event1a.jpg" alt="صورة 1">
       </div>
     </div>
-    <div class="card">
-      <img src="event2.jpeg" alt="حدث 2">
-      <div class="card-body">
-        <h3>عنوان الحدث الثاني</h3>
-        <p>تفاصيل مختصرة عن الحدث الثاني بشكل أنيق وجذاب.</p>
+
+    <!-- حدث 2 -->
+    <div class="event-card">
+      <div class="event-content">
+        <h2 class="event-title">عنوان الحدث الثاني</h2>
+        <p class="event-desc">وصف قصير للحدث الثاني... تفاصيل إضافية عن الفعالية أو النشاط.</p>
+      </div>
+      <div class="event-gallery">
+        <img src="event2a.jpg" alt="صورة 1">
       </div>
     </div>
-    <div class="card">
-      <img src="event3.jpeg" alt="حدث 3">
-      <div class="card-body">
-        <h3>عنوان الحدث الثالث</h3>
-        <p>تفاصيل مختصرة عن الحدث الثالث بشكل أنيق وجذاب.</p>
+
+    <!-- حدث 3 -->
+    <div class="event-card">
+      <div class="event-content">
+        <h2 class="event-title">عنوان الحدث الثالث</h2>
+        <p class="event-desc">وصف قصير للحدث الثالث... تفاصيل إضافية عن الفعالية أو النشاط.</p>
+      </div>
+      <div class="event-gallery">
+        <img src="event3a.jpg" alt="صورة 1">
       </div>
     </div>
-  </div>
-</section>
 
-<footer id="footer">
-  <p>© 2026 الموقع الرسمي للنائب أحمد ياسين حسن</p>
-</footer>
+  </section>
 
-<script>
-  function toggleMenu() {
-    document.querySelector("nav").classList.toggle("show");
-  }
-</script>
+  <!-- فوتر -->
+  <footer>
+    <p>© 2026 جميع الحقوق محفوظة -  الموقع الرسمي للنائب احمد ياسين حسن</p>
+  </footer>
 
 </body>
 </html>
