@@ -396,3 +396,55 @@ nav a:hover {
         left: 5px;
     }
 }
+
+/* منع التحريك يمين/شمال */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* يمنع البار الأفقي */
+}
+
+/* ضبط الحاوية */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* مسافة داخلية تمنع الطلوع بره */
+  box-sizing: border-box;
+}
+
+/* الأزرار في الهيرو */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap; /* يخليهم ينزلوا تحت بعض لو الشاشة صغيرة */
+  justify-content: center;
+  gap: 15px;
+}
+.hero-btn {
+  max-width: 100%;
+  text-align: center;
+}
+
+/* التلت خانات (الأحداث – الأخبار – الأنشطة) */
+.nav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.nav-box {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .nav-box {
+    flex: 1 1 100%; /* على الموبايل كل واحدة تاخد عرض الشاشة بالكامل */
+  }
+}
+
+/* تحسين الأيقونات الجانبية */
+.side-icons-left {
+  left: 10px; /* أقرب للشاشة */
+}
+.icon-circle img {
+  filter: none; /* يظهر الأيقونات بألوانها الأصلية */
+}
