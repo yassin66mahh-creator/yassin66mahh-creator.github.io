@@ -449,13 +449,41 @@ html, body {
   filter: none; /* يظهر الأيقونات بألوانها الأصلية */
 }
 
+/* تغليف الأيقونة مع زرار تواصل معنا */
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* أيقونة التلت شرط */
 .mobile-menu-icon {
   display: none;
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
   color: #0b3d91;
-  margin-right: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.mobile-menu-icon:hover {
+  background: #f0f0f0;
+}
+
+/* زرار تواصل معنا */
+.contact-btn {
+  background: #0b3d91;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #082c6c;
 }
 
 /* القائمة على الموبايل */
@@ -464,16 +492,17 @@ html, body {
     display: block; /* يظهر التلت شرط */
   }
   nav {
-    display: none; /* يخفي القائمة العادية */
+    display: none;
     flex-direction: column;
     background: #fff;
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 0;
     width: 100%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 15px;
   }
   nav.show {
-    display: flex; /* يظهر القائمة لما تدوس على التلت شرط */
+    display: flex;
   }
 }
