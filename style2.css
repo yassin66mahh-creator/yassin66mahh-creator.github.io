@@ -452,13 +452,13 @@ html, body {
 /* أيقونة التلت شرط */
 .mobile-menu-icon {
   display: none; /* مخفي افتراضياً */
-  font-size: 24px; /* أصغر شوية ومرتب */
+  font-size: 20px; /* أصغر وأنيق */
   cursor: pointer;
   color: #0b3d91; /* لون الهوية */
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
-  background: rgba(240,240,240,0.9); /* خلفية فاتحة شبه شفافة */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: rgba(240,240,240,0.8); /* خلفية فاتحة شبه شفافة */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
@@ -472,7 +472,7 @@ html, body {
 .contact-btn {
   background: #0b3d91;
   color: #fff;
-  padding: 8px 16px; /* متناسق مع التلت شرط */
+  padding: 6px 14px; /* متناسق مع التلت شرط */
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
