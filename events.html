@@ -1,147 +1,205 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>آخر الأحداث</title>
-
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
       margin: 0;
-      padding: 0;
-      color: #222;
+      background: #f9f9f9;
     }
-
-    /* الهيدر */
-    .main-header {
-      background: linear-gradient(90deg, #000, #0044cc, #009933);
+    header {
+      background: #0b3d91;
       color: #fff;
-      text-align: center;
-      padding: 50px 20px;
+      padding: 15px;
     }
-    .main-header h1 {
-      font-size: 3rem;
-      margin: 0;
+    header .logo {
+      height: 40px;
     }
-    .main-header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
+    nav {
+      display: flex;
+      gap: 15px;
     }
-
-    /* قسم الأحداث */
-    .events-section {
-      padding: 50px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
     }
-
-    .event-card {
+    .contact-btn {
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      overflow: hidden;
-      transition: transform 0.3s ease;
+      color: #0b3d91;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
     }
-    .event-card:hover {
-      transform: translateY(-8px);
+    .mobile-menu-icon {
+      display: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #0b3d91;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(240,240,240,0.8);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .mobile-menu-icon:hover {
+      background: #d4af37;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 15px;
+      }
+      nav.show {
+        display: flex;
+      }
+      .mobile-menu-icon {
+        display: inline-block;
+      }
     }
 
-    .event-content {
-      padding: 20px;
+    /* Section */
+    .page-section {
+      padding: 40px 20px;
+      text-align: center;
     }
-    .event-title {
-      font-size: 1.8rem;
-      margin: 0 0 10px;
-      color: #0044cc;
-    }
-    .event-desc {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
+    .section-title {
+      font-size: 28px;
+      color: #0b3d91;
+      margin-bottom: 30px;
     }
 
-    /* معرض الصور داخل كل حدث */
-    .event-gallery {
+    /* Grid */
+    .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
+      gap: 25px;
     }
-    .event-gallery img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 6px;
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
-    /* الفوتر */
+    /* Card */
+    .card {
+      background: #fff;
+      border: 1px solid #0b3d91;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-body h3 {
+      margin: 0 0 10px;
+      color: #0b3d91;
+    }
+    .card-body p {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .btn-green {
+      display: inline-block;
+      background: #28a745;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-green:hover {
+      background: #218838;
+    }
+
     footer {
-      background: #000;
+      background: #0b3d91;
       color: #fff;
       text-align: center;
-      padding: 25px;
+      padding: 15px;
       margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <!-- هيدر -->
-  <header class="main-header">
-    <h1>آخر الأحداث</h1>
-    <p>تابع أحدث الفعاليات والأنشطة المميزة</p>
-  </header>
+<header class="header">
+  <div class="container header-content">
+    <img src="logo.png" class="logo">
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="events.html">آخر الأحداث</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="news.html">الأخبار</a>
+    </nav>
+    <a href="#footer" class="contact-btn">تواصل معنا</a>
+    <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
 
-  <!-- قسم الأحداث -->
-  <section class="events-section">
-
-    <!-- حدث 1 -->
-    <div class="event-card">
-      <div class="event-content">
-        <h2 class="event-title">عنوان الحدث الأول</h2>
-        <p class="event-desc">وصف قصير للحدث الأول... هنا تقدر تضيف تفاصيل عن النشاط أو الفعالية.</p>
-      </div>
-      <div class="event-gallery">
-        <img src="event1a.jpg" alt="صورة 1">
-        <img src="event1b.jpg" alt="صورة 2">
-        <img src="event1c.jpg" alt="صورة 3">
-      </div>
-    </div>
-
-    <!-- حدث 2 -->
-    <div class="event-card">
-      <div class="event-content">
-        <h2 class="event-title">عنوان الحدث الثاني</h2>
-        <p class="event-desc">وصف قصير للحدث الثاني... تفاصيل إضافية عن الفعالية أو النشاط.</p>
-      </div>
-      <div class="event-gallery">
-        <img src="event2a.jpg" alt="صورة 1">
-        <img src="event2b.jpg" alt="صورة 2">
-        <img src="event2c.jpg" alt="صورة 3">
+<section class="page-section">
+  <h2 class="section-title">آخر الأحداث</h2>
+  <div class="grid-3">
+    <div class="card">
+      <img src="event1.jpeg" alt="حدث 1">
+      <div class="card-body">
+        <h3>عنوان الحدث الأول</h3>
+        <p>تفاصيل مختصرة عن الحدث الأول.</p>
+        <a href="#" class="btn-green">اقرأ المزيد</a>
       </div>
     </div>
-
-    <!-- حدث 3 -->
-    <div class="event-card">
-      <div class="event-content">
-        <h2 class="event-title">عنوان الحدث الثالث</h2>
-        <p class="event-desc">وصف قصير للحدث الثالث... تفاصيل إضافية عن الفعالية أو النشاط.</p>
-      </div>
-      <div class="event-gallery">
-        <img src="event3a.jpg" alt="صورة 1">
-        <img src="event3b.jpg" alt="صورة 2">
-        <img src="event3c.jpg" alt="صورة 3">
+    <div class="card">
+      <img src="event2.jpeg" alt="حدث 2">
+      <div class="card-body">
+        <h3>عنوان الحدث الثاني</h3>
+        <p>تفاصيل مختصرة عن الحدث الثاني.</p>
+        <a href="#" class="btn-green">اقرأ المزيد</a>
       </div>
     </div>
+    <div class="card">
+      <img src="event3.jpeg" alt="حدث 3">
+      <div class="card-body">
+        <h3>عنوان الحدث الثالث</h3>
+        <p>تفاصيل مختصرة عن الحدث الثالث.</p>
+        <a href="#" class="btn-green">اقرأ المزيد</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </section>
+<footer class="footer" id="footer">
+  <p>© 2026 الموقع الرسمي للنائب أحمد ياسين حسن</p>
+</footer>
 
-  <!-- فوتر -->
-  <footer>
-    <p>© 2026 جميع الحقوق محفوظة - الموقع الرسمي للنائب احمد ياسين حسن </p>
-  </footer>
+<script>
+  function toggleMenu() {
+    document.querySelector("nav").classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
