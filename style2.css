@@ -452,7 +452,7 @@ html, body {
 /* أيقونة التلت شرط */
 .mobile-menu-icon {
   display: none; /* مخفي افتراضياً */
-  font-size: 32px; /* أكبر وواضح */
+  font-size: 16px; /* أكبر وواضح */
   cursor: pointer;
   color: #0b3d91; /* لون الهوية */
   padding: 10px 14px;
@@ -472,7 +472,7 @@ html, body {
 .contact-btn {
   background: #0b3d91;
   color: #fff;
-  padding: 10px 18px; /* نفس ارتفاع التلت شرط */
+  padding: 8px 14px; /* نفس ارتفاع التلت شرط */
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
