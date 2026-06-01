@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>آخر الأحداث</title>
+  <title>صفحة فخمة</title>
   <style>
     body {
       font-family: 'IBM Plex Sans Arabic', sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      background: #f4f6fa;
     }
     header {
       background: #0b3d91;
       color: #fff;
       padding: 15px;
-    }
-    header .logo {
-      height: 40px;
-    }
-    nav {
       display: flex;
-      gap: 15px;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav a {
+    header nav a {
       color: #fff;
       text-decoration: none;
+      margin: 0 10px;
       font-weight: 600;
     }
     .contact-btn {
@@ -73,20 +70,30 @@
 
     /* Section */
     .page-section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
     .section-title {
-      font-size: 28px;
+      font-size: 32px;
       color: #0b3d91;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #d4af37;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
     }
 
     /* Grid */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 30px;
     }
     @media (max-width: 768px) {
       .grid-3 {
@@ -97,39 +104,42 @@
     /* Card */
     .card {
       background: #fff;
-      border: 1px solid #0b3d91;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transition: 0.4s;
+      position: relative;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
     .card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
     .card-body {
-      padding: 15px;
+      padding: 20px;
     }
     .card-body h3 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       color: #0b3d91;
+      font-size: 22px;
     }
     .card-body p {
-      color: #333;
-      margin-bottom: 15px;
+      color: #444;
+      margin-bottom: 20px;
+      line-height: 1.6;
     }
     .btn-green {
       display: inline-block;
       background: #28a745;
       color: #fff;
-      padding: 8px 14px;
-      border-radius: 6px;
+      padding: 10px 18px;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: 600;
       transition: 0.3s;
     }
     .btn-green:hover {
@@ -140,25 +150,25 @@
       background: #0b3d91;
       color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="container header-content">
-    <img src="logo.png" class="logo">
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="events.html">آخر الأحداث</a>
-      <a href="activities.html">الأنشطة</a>
-      <a href="news.html">الأخبار</a>
-    </nav>
-    <a href="#footer" class="contact-btn">تواصل معنا</a>
-    <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+<header>
+  <div>
+    <img src="logo.png" class="logo" style="height:40px;">
   </div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="events.html">آخر الأحداث</a>
+    <a href="activities.html">الأنشطة</a>
+    <a href="news.html">الأخبار</a>
+  </nav>
+  <a href="#footer" class="contact-btn">تواصل معنا</a>
+  <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
 </header>
 
 <section class="page-section">
@@ -168,7 +178,7 @@
       <img src="event1.jpeg" alt="حدث 1">
       <div class="card-body">
         <h3>عنوان الحدث الأول</h3>
-        <p>تفاصيل مختصرة عن الحدث الأول.</p>
+        <p>تفاصيل مختصرة عن الحدث الأول بشكل أنيق وجذاب.</p>
         <a href="#" class="btn-green">اقرأ المزيد</a>
       </div>
     </div>
@@ -176,7 +186,7 @@
       <img src="event2.jpeg" alt="حدث 2">
       <div class="card-body">
         <h3>عنوان الحدث الثاني</h3>
-        <p>تفاصيل مختصرة عن الحدث الثاني.</p>
+        <p>تفاصيل مختصرة عن الحدث الثاني بشكل أنيق وجذاب.</p>
         <a href="#" class="btn-green">اقرأ المزيد</a>
       </div>
     </div>
@@ -184,14 +194,14 @@
       <img src="event3.jpeg" alt="حدث 3">
       <div class="card-body">
         <h3>عنوان الحدث الثالث</h3>
-        <p>تفاصيل مختصرة عن الحدث الثالث.</p>
+        <p>تفاصيل مختصرة عن الحدث الثالث بشكل أنيق وجذاب.</p>
         <a href="#" class="btn-green">اقرأ المزيد</a>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer" id="footer">
+<footer id="footer">
   <p>© 2026 الموقع الرسمي للنائب أحمد ياسين حسن</p>
 </footer>
 
