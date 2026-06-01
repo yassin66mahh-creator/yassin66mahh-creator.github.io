@@ -452,28 +452,28 @@ html, body {
 /* أيقونة التلت شرط */
 .mobile-menu-icon {
   display: none; /* مخفي افتراضياً */
-  font-size: 16px; /* أكبر وواضح */
+  font-size: 24px; /* أصغر شوية ومرتب */
   cursor: pointer;
   color: #0b3d91; /* لون الهوية */
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: #f9f9f9; /* خلفية فاتحة تفرق عن الأبيض */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(240,240,240,0.9); /* خلفية فاتحة شبه شفافة */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
 .mobile-menu-icon:hover {
   background: #d4af37; /* لون ذهبي عند المرور */
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* زرار تواصل معنا */
 .contact-btn {
   background: #0b3d91;
   color: #fff;
-  padding: 8px 14px; /* نفس ارتفاع التلت شرط */
-  border-radius: 8px;
+  padding: 8px 16px; /* متناسق مع التلت شرط */
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
