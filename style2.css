@@ -87,9 +87,13 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
+/* زرارين الهيرو */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
 .hero-btn {
-    background: #d4af37;
-    color: #0b3d91;
     padding: 12px 30px;
     border-radius: 8px;
     text-decoration: none;
@@ -97,11 +101,27 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.hero-btn:hover {
-    background: #b8922f;
+.hero-btn.yellow {
+  background: #d4af37;
+  color: #0b3d91;
 }
 
-/* ---------------- HERO IMAGE FIXED ---------------- */
+.hero-btn.yellow:hover {
+  background: #b8922f;
+}
+
+.hero-btn.white {
+  background: #fff;
+  color: #0b3d91;
+  border: 2px solid #0b3d91;
+}
+
+.hero-btn.white:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* ---------------- HERO IMAGE ---------------- */
 
 .hero-img {
     width: 260px !important;
@@ -271,17 +291,64 @@ nav a:hover {
     color: #fff;
     text-align: center;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
 .credit-logo {
-    height: 40px;
-    margin-bottom: 10px;
+    height: 65px;
+    margin: 0;
+}
+
+.yassin-red {
+    color: #b30000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Floating Side Icons Left */
+.side-icons-left {
+    position: fixed;
+    left: 15px;
+    top: 45%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 99999;
+}
+
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.icon-circle.green { background: #25D366; }
+.icon-circle.blue { background: #1877F2; }
+.icon-circle.red { background: #E53935; }
+
+.icon-circle img {
+    width: 28px;
+    height: 28px;
+    filter: none; /* يظهر الأيقونات بألوانها الأصلية */
+}
+
+.icon-circle:hover {
+    transform: scale(1.1);
 }
 
 /* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
-
     .hero {
         padding: 40px 0;
         text-align: center;
@@ -315,66 +382,17 @@ nav a:hover {
     .nav-box {
         width: 100%;
     }
-}
 
-/* Credit Bar تعديل */
-.credit-bar {
-    background: #082c6c;
-    color: #fff;
-    padding: 15px;
-    display: flex;              /* يخلي العناصر جنب بعض */
-    align-items: center;        /* يظبطهم في النص عمودي */
-    justify-content: center;    /* يخليهم في النص أفقي */
-    gap: 15px;                  /* مسافة بين اللوجو والكلمة */
-}
+    .hero-buttons {
+        flex-direction: column;
+    }
 
-.credit-logo {
-    height: 65px; /* أكبر شوية */
-    margin: 0;
-}
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
 
-.yassin-red {
-    color: #b30000; /* أحمر */
-    font-size: 20px; /* أكبر شوية لو حابب */
-    font-weight: bold;
-}
-
-/* Floating Side Icons Left */
-.side-icons-left {
-    position: fixed;
-    left: 15px;              /* على الشمال */
-    top: 45%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 99999;
-}
-
-/* شكل الدواير */
-.icon-circle {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-/* ألوان مناسبة للموقع */
-.icon-circle.green { background: #25D366; }   /* واتس */
-.icon-circle.blue { background: #1877F2; }    /* فيس */
-.icon-circle.red { background: #E53935; }     /* كول */
-
-.icon-circle img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1); /* يخلي الأيقونة بيضاء */
-}
-
-.icon-circle:hover {
-    transform: scale(1.1);
+    .side-icons-left {
+        left: 5px;
+    }
 }
