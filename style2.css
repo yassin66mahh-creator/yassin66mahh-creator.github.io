@@ -448,3 +448,32 @@ html, body {
 .icon-circle img {
   filter: none; /* يظهر الأيقونات بألوانها الأصلية */
 }
+
+/* أيقونة التلت شرط */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0b3d91;
+  margin-right: 15px;
+}
+
+/* القائمة على الموبايل */
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block; /* يظهر التلت شرط */
+  }
+  nav {
+    display: none; /* يخفي القائمة العادية */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  nav.show {
+    display: flex; /* يظهر القائمة لما تدوس على التلت شرط */
+  }
+}
