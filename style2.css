@@ -506,7 +506,7 @@ html, body {
 
 /* الهيدر ثابت */
 .header {
-  position: fixed;
+  position: fixed;   /* يخلي الهيدر ثابت */
   top: 0;
   left: 0;
   width: 100%;
