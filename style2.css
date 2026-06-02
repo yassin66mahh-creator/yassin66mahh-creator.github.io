@@ -503,3 +503,9 @@ html, body {
     display: inline-block; /* يظهر التلت شرط على الموبايل */
   }
 }
+
+@media (max-width: 768px) {
+  .contact-btn {
+    display: none !important; /* يخفي الزرار في الموبايل */
+  }
+}
