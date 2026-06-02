@@ -505,7 +505,7 @@ html, body {
 }
 
 /* الهيدر ثابت */
-.main-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -513,35 +513,34 @@ html, body {
   z-index: 1000;
 }
 body {
-  padding-top: 120px; /* علشان المحتوى ما يختفيش ورا الهيدر */
+  padding-top: 100px; /* علشان المحتوى ما يختفيش ورا الهيدر */
 }
 
 /* تعديلات الموبايل فقط */
 @media (max-width: 768px) {
   /* زرار تواصل معنا جنب التلت شرط */
-  .main-header .nav-container {
-    display: flex;
-    align-items: center;
+  .header-content {
     justify-content: flex-start; /* يبدأ من الشمال */
     gap: 8px; /* مسافة صغيرة بينهم */
   }
-  .main-header .menu-toggle {
+  .mobile-menu-icon {
     display: inline-block; /* يظهر التلت شرط */
   }
-  .main-header .contact-btn {
+  .contact-btn {
     margin-left: 0; /* يقربها شمال جنب التلت شرط */
     position: relative;
     left: 0;
   }
 
   /* ضبط الأزرار (آخر الأحداث – انضم الآن) */
-  .event-card .event-content {
-    padding: 20px 15px; /* نفس المسافة يمين وشمال */
+  .hero-buttons {
+    padding: 0 15px; /* نفس المسافة يمين وشمال */
     box-sizing: border-box;
+    justify-content: space-between; /* يخليهم متساويين */
   }
 
   /* ضبط البلوك بتاع التلت مراحل */
-  .steps-section {
+  .steps-grid {
     padding: 0 15px; /* نفس المسافة يمين وشمال */
     box-sizing: border-box;
   }
