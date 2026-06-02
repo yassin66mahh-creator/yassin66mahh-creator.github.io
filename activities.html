@@ -30,7 +30,7 @@
       margin-top: 10px;
     }
 
-    /* قسم الأحداث */
+    /* قسم الأنشطة */
     .events-section {
       padding: 50px;
       display: grid;
@@ -63,7 +63,7 @@
       margin-bottom: 20px;
     }
 
-    /* معرض الصور داخل كل حدث */
+    /* معرض الصور داخل كل نشاط */
     .event-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -71,9 +71,63 @@
     }
     .event-gallery img {
       width: 100%;
-      height: 120px;
+      height: auto;          /* مرنة للموبايل */
+      max-height: 350px;     /* حجم مناسب للكمبيوتر */
       object-fit: cover;
       border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .event-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox-content {
+      position: relative;
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      animation: floatIn 0.4s ease;
+    }
+    .lightbox-content img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+    .close-btn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 28px;
+      background: #d4af37;
+      color: #fff;
+      border-radius: 50%;
+      padding: 4px 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .close-btn:hover {
+      background: #b38e2e;
+    }
+
+    @keyframes floatIn {
+      from { transform: scale(0.8) translateY(30px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
     }
 
     /* الفوتر */
@@ -94,10 +148,10 @@
     <p>تابع أحدث الفعاليات والأنشطة المميزة</p>
   </header>
 
-  <!-- قسم الأحداث -->
+  <!-- قسم الأنشطة -->
   <section class="events-section">
 
-    <!-- حدث 1 -->
+    <!-- نشاط 1 -->
     <div class="event-card">
       <div class="event-content">
         <h2 class="event-title">اجتماع أمانة التدريب والتثقيف بمحافظة أسيوط</h2>
@@ -109,7 +163,7 @@
       </div>
     </div>
 
-    <!-- حدث 2 -->
+    <!-- نشاط 2 -->
     <div class="event-card">
       <div class="event-content">
         <h2 class="event-title">دورة تدريبية بعنوان “التأهيل السياسي” بمحافظة أسيوط</h2>
@@ -120,7 +174,7 @@
       </div>
     </div>
 
-    <!-- حدث 3 -->
+    <!-- نشاط 3 -->
     <div class="event-card">
       <div class="event-content">
         <h2 class="event-title">مؤتمر بمحافظة المنيا بحضور فخامة الرئيس عبد الفتاح السيسي</h2>
@@ -133,10 +187,32 @@
 
   </section>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="close-btn" onclick="closeLightbox()">×</span>
+      <img id="lightbox-img" src="">
+    </div>
+  </div>
+
   <!-- فوتر -->
   <footer>
-    <p>© 2026 جميع الحقوق محفوظة -  الموقع الرسمي للنائب احمد ياسين حسن</p>
+    <p>©️ 2026 جميع الحقوق محفوظة -  الموقع الرسمي للنائب احمد ياسين حسن</p>
   </footer>
+
+  <script>
+    // اربط الصور بالـ Lightbox علشان يشتغل على الكمبيوتر والموبايل
+    document.querySelectorAll('.event-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox").style.display = "flex";
+      });
+    });
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
