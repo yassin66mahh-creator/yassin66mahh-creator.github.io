@@ -1303,7 +1303,7 @@ input:focus, textarea:focus {
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    height: 45px;   /* 👈 ده أهم سطر */
+    height: 55px;   /* 👈 ده أهم سطر */
   }
 
   nav {
@@ -1321,5 +1321,89 @@ input:focus, textarea:focus {
 
   .mobile-menu-icon {
     font-size: 24px;
+  }
+}
+
+
+.fab-container {
+  position: fixed;
+  left: 15px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+}
+
+/* زرار الرئيسي */
+.fab-main {
+  width: 55px;
+  height: 55px;
+  background: #1e88e5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.fab-main:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* الأيقونات */
+.fab-item {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+/* ألوان */
+.whatsapp { background: #25D366; }
+.facebook { background: #1877F2; }
+.call { background: #333; }
+
+/* لما القائمة تفتح */
+.fab-container.active .fab-item {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* تأخير animation */
+.fab-container.active .whatsapp {
+  transition-delay: 0.05s;
+}
+
+.fab-container.active .facebook {
+  transition-delay: 0.1s;
+}
+
+.fab-container.active .call {
+  transition-delay: 0.15s;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .fab-container {
+    left: 10px;
+    bottom: 15px;
   }
 }
