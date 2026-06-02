@@ -1295,7 +1295,7 @@ input:focus, textarea:focus {
 @media (max-width: 768px) {
 
   .header {
-    padding: 8px 0;
+    padding: 5px 0;
   }
 
   .logo {
@@ -1304,7 +1304,7 @@ input:focus, textarea:focus {
 
   .contact-btn {
     padding: 6px 10px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .header-content {
