@@ -1290,3 +1290,24 @@ input:focus, textarea:focus {
     gap: 20px;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 8px 0;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .contact-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .header-content {
+    gap: 10px;
+  }
+}
