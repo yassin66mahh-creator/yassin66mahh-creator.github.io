@@ -1,511 +1,948 @@
-/* الخط الأساسي */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    background: #f4f6fa;
-    color: #0b3d91;
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--primary:#0F172A;
+--secondary:#14B8A6;
+--accent:#F97316;
+
+--light:#F8FAFC;
+--white:#FFFFFF;
+
+--text:#1E293B;
+
+--shadow:
+0 10px 35px rgba(0,0,0,.08);
+
+}
+
+body{
+
+font-family:'IBM Plex Sans Arabic',sans-serif;
+
+background:var(--light);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+left:0;
+
+z-index:9999;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 2px 20px rgba(0,0,0,.05);
+
+}
+
+.header-content{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+height:90px;
+
+}
+
+.logo{
+
+height:75px;
+
+}
+
+nav{
+
+display:flex;
+
+gap:30px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:var(--primary);
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--secondary);
+
+}
+
+.contact-btn{
+
+background:var(--secondary);
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.contact-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.mobile-menu-icon{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+position:relative;
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+#0F172A,
+#1E293B
+);
+
+padding-top:120px;
+
+overflow:hidden;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(
+circle at top left,
+rgba(20,184,166,.15),
+transparent
+);
+
+}
+
+.hero-content{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:50px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.hero-text{
+
+flex:1;
+
+color:white;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+
+background:rgba(255,255,255,.1);
+
+padding:10px 18px;
+
+border-radius:50px;
+
+margin-bottom:20px;
+
 }
+
+.hero-text h1{
 
-/* الحاوية الأساسية */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+font-size:60px;
+
+line-height:1.2;
+
+margin-bottom:20px;
+
 }
+
+.hero-sub{
+
+font-size:20px;
+
+line-height:2;
 
-/* ---------------- HEADER ---------------- */
+opacity:.9;
 
-.header {
-    background: #ffffff;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 999;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.hero-buttons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:35px;
+
 }
+
+.hero-btn{
+
+padding:15px 30px;
 
-.logo {
-    height: 80px;
+border-radius:14px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
 }
+
+.primary-btn{
+
+background:var(--accent);
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #0b3d91;
-    font-weight: 600;
-    transition: 0.3s;
+color:white;
+
 }
+
+.secondary-btn{
 
-nav a:hover {
-    color: #d4af37;
+background:white;
+
+color:var(--primary);
+
 }
+
+.hero-btn:hover{
 
-.contact-btn {
-    background: #0b3d91;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
+transform:translateY(-4px);
+
 }
+
+.hero-image-wrapper{
+
+flex:1;
 
-.contact-btn:hover {
-    background: #082c6c;
+display:flex;
+
+justify-content:center;
+
 }
+
+.hero-img{
 
-/* ---------------- HERO ---------------- */
+width:380px;
 
-.hero {
-    padding: 80px 0;
-    background: linear-gradient(to left, #0b3d91, #0b3d91cc), url('hero.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+max-width:100%;
+
+border-radius:30px;
+
+background:white;
+
+padding:10px;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.25);
+
 }
+
+/* =========================
+   STATS
+========================= */
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.stats{
+
+margin-top:-70px;
+
+position:relative;
+
+z-index:5;
+
 }
+
+.stats-grid{
+
+display:grid;
 
-.hero-text h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
 }
+
+.stat-box{
+
+background:white;
+
+padding:35px;
 
-.hero-sub {
-    font-size: 20px;
-    line-height: 1.8;
-    margin-bottom: 25px;
+text-align:center;
+
+border-radius:24px;
+
+box-shadow:var(--shadow);
+
 }
+
+.stat-box h3{
+
+font-size:40px;
+
+color:var(--secondary);
 
-/* زرارين الهيرو */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
+margin-bottom:10px;
+
 }
+
+/* =========================
+   SECTIONS
+========================= */
+
+.steps,
+.about,
+.sections-nav,
+.members,
+.join-us{
 
-.hero-btn {
-    padding: 12px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+padding:100px 0;
+
 }
+
+.steps h2,
+.about h2,
+.section-title{
+
+text-align:center;
 
-.hero-btn.yellow {
-  background: #d4af37;
-  color: #0b3d91;
+font-size:42px;
+
+color:var(--primary);
+
+margin-bottom:50px;
+
 }
+
+.steps-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
 
-.hero-btn.yellow:hover {
-  background: #b8922f;
+gap:25px;
+
 }
+
+.step-box{
+
+background:white;
+
+padding:35px;
+
+border-radius:24px;
 
-.hero-btn.white {
-  background: #fff;
-  color: #0b3d91;
-  border: 2px solid #0b3d91;
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+text-align:center;
+
 }
 
-.hero-btn.white:hover {
-  background: #f0f0f0;
-  transform: scale(1.05);
+.step-box:hover{
+
+transform:translateY(-10px);
+
 }
+
+.step-icon{
 
-/* ---------------- HERO IMAGE ---------------- */
+width:70px;
 
-.hero-img {
-    width: 260px !important;
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+height:70px;
+
+margin:auto;
+
+margin-bottom:20px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:var(--secondary);
+
+color:white;
+
+font-size:24px;
+
+font-weight:bold;
+
 }
+
+.about-box{
 
-/* ---------------- STEPS ---------------- */
+background:white;
 
-.steps {
-    padding: 60px 0;
-    text-align: center;
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+line-height:2;
+
 }
+
+.nav-grid{
 
-.steps h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
 }
+
+.nav-box{
+
+background:white;
+
+padding:40px;
 
-.steps-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+border-radius:24px;
+
+text-decoration:none;
+
+color:var(--text);
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
 }
+
+.nav-box:hover{
 
-.step-box {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    width: 32%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+transform:translateY(-10px);
+
+background:var(--primary);
+
+color:white;
+
 }
+
+.members-text{
+
+text-align:center;
+
+font-size:22px;
 
-.step-box:hover {
-    transform: translateY(-5px);
+margin-top:20px;
+
 }
+
+.join-box{
+
+background:white;
+
+padding:60px;
+
+border-radius:30px;
 
-.step-icon {
-    background: #0b3d91;
-    color: #fff;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    font-size: 22px;
-    margin-bottom: 15px;
+box-shadow:var(--shadow);
+
+text-align:center;
+
+max-width:700px;
+
+margin:auto;
+
 }
+
+.join-btn{
+
+display:inline-block;
 
-/* ---------------- ABOUT ---------------- */
+margin-top:20px;
 
-.about {
-    padding: 60px 0;
+padding:15px 35px;
+
+background:var(--accent);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:14px;
+
+font-weight:700;
+
 }
 
-.about-box {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+background:var(--primary);
+
+color:white;
+
+padding:70px 0;
+
 }
+
+.footer-content{
 
-.about-box h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+display:flex;
+
+justify-content:space-between;
+
+gap:30px;
+
 }
+
+.footer-col h3{
+
+margin-bottom:15px;
 
-/* ---------------- SECTIONS NAV ---------------- */
+color:var(--secondary);
 
-.sections-nav {
-    padding: 60px 0;
 }
+
+.credit-bar{
+
+background:#0A1220;
+
+color:white;
+
+padding:20px;
+
+display:flex;
+
+justify-content:center;
 
-.nav-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+align-items:center;
+
+gap:15px;
+
 }
+
+.credit-logo{
 
-.nav-box {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    width: 32%;
-    text-decoration: none;
-    color: #0b3d91;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+height:60px;
+
 }
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
 
-.nav-box:hover {
-    transform: translateY(-5px);
-    background: #0b3d91;
-    color: #fff;
+.mobile-menu-icon{
+
+display:block;
+
 }
+
+nav{
+
+display:none;
+
+position:absolute;
+
+top:90px;
 
-/* ---------------- JOIN US ---------------- */
+right:0;
 
-.join-us {
-    background: #f5f7fa;
-    padding: 60px 20px;
-    text-align: center;
+width:100%;
+
+background:white;
+
+flex-direction:column;
+
+padding:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
 }
 
-.join-box {
-    background: #ffffff;
-    padding: 40px 20px;
-    max-width: 600px;
-    margin: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+nav.show{
+
+display:flex;
+
 }
+
+.contact-btn{
 
-.join-btn {
-    display: inline-block;
-    background: #0b3d91;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
+display:none;
+
 }
+
+.hero-content{
+
+flex-direction:column-reverse;
 
-.join-btn:hover {
-    background: #082c6c;
+text-align:center;
+
 }
 
-/* ---------------- FOOTER ---------------- */
+.hero-text h1{
 
-.footer {
-    background: #0b3d91;
-    color: #fff;
-    padding: 50px 0;
+font-size:38px;
+
 }
+
+.hero-sub{
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
+font-size:16px;
+
 }
+
+.hero-buttons{
+
+flex-direction:column;
 
-.footer-col h3 {
-    margin-bottom: 15px;
-    color: #d4af37;
 }
 
-.footer-col a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 8px;
+.hero-img{
+
+width:260px;
+
 }
+
+.stats-grid,
+.steps-grid,
+.nav-grid,
+.footer-content{
 
-.footer-col a:hover {
-    color: #d4af37;
+grid-template-columns:1fr;
+
+display:grid;
+
 }
+
+.about-box,
+.join-box{
 
-/* ---------------- CREDIT BAR ---------------- */
+padding:30px;
 
-.credit-bar {
-    background: #082c6c;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
 }
 
-.credit-logo {
-    height: 65px;
-    margin: 0;
 }
 
-.yassin-red {
-    color: #b30000;
-    font-size: 20px;
-    font-weight: bold;
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+.hidden{
+opacity:0;
+transform:translateY(60px);
+transition:all .8s ease;
 }
 
-/* Floating Side Icons Left */
-.side-icons-left {
-    position: fixed;
-    left: 15px;
-    top: 45%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 99999;
+.show{
+opacity:1;
+transform:translateY(0);
 }
+
+/* =========================
+   HOVER PREMIUM EFFECTS
+========================= */
+
+.step-box:hover,
+.nav-box:hover,
+.stat-box:hover,
+.vision-card:hover,
+.timeline-item:hover{
+
+transform:
+translateY(-12px)
+scale(1.02);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.15);
 
-.icon-circle {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    cursor: pointer;
-    transition: 0.25s;
 }
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+#topBtn{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:60px;
 
-.icon-circle.green { background: #25D366; }
-.icon-circle.blue { background: #1877F2; }
-.icon-circle.red { background: #E53935; }
+height:60px;
 
-.icon-circle img {
-    width: 28px;
-    height: 28px;
-    filter: none; /* يظهر الأيقونات بألوانها الأصلية */
+border:none;
+
+border-radius:50%;
+
+background:var(--secondary);
+
+color:white;
+
+font-size:24px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:99999;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+transition:.3s;
+
 }
+
+#topBtn:hover{
+
+transform:translateY(-5px);
 
-.icon-circle:hover {
-    transform: scale(1.1);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* =========================
+   LOADING SCREEN
+========================= */
 
-@media (max-width: 768px) {
-    .hero {
-        padding: 40px 0;
-        text-align: center;
-    }
+.loader{
 
-    .hero-content {
-        flex-direction: column;
-        gap: 20px;
-    }
+position:fixed;
 
-    .hero-text h1 {
-        font-size: 28px;
-    }
+inset:0;
 
-    .hero-sub {
-        font-size: 16px;
-    }
+background:#0F172A;
 
-    .hero-img {
-        width: 180px !important;
-    }
+display:flex;
 
-    .steps-grid,
-    .nav-grid,
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
+justify-content:center;
 
-    .step-box,
-    .nav-box {
-        width: 100%;
-    }
+align-items:center;
 
-    .hero-buttons {
-        flex-direction: column;
-    }
+z-index:999999;
 
-    .hero-btn {
-        width: 100%;
-        text-align: center;
-    }
+transition:.8s;
 
-    .side-icons-left {
-        left: 5px;
-    }
 }
 
-/* منع التحريك يمين/شمال */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* يمنع البار الأفقي */
+.loader.hidden-loader{
+
+opacity:0;
+
+visibility:hidden;
+
 }
+
+.loader-circle{
+
+width:80px;
 
-/* ضبط الحاوية */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px; /* مسافة داخلية تمنع الطلوع بره */
-  box-sizing: border-box;
+height:80px;
+
+border:6px solid rgba(255,255,255,.15);
+
+border-top:6px solid var(--secondary);
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
 }
+
+@keyframes spin{
 
-/* الأزرار في الهيرو */
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap; /* يخليهم ينزلوا تحت بعض لو الشاشة صغيرة */
-  justify-content: center;
-  gap: 15px;
+100%{
+transform:rotate(360deg);
 }
-.hero-btn {
-  max-width: 100%;
-  text-align: center;
+
 }
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid img{
 
-/* التلت خانات (الأحداث – الأخبار – الأنشطة) */
-.nav-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
 }
-.nav-box {
-  flex: 1 1 calc(33.333% - 20px);
-  box-sizing: border-box;
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
 }
-@media (max-width: 768px) {
-  .nav-box {
-    flex: 1 1 100%; /* على الموبايل كل واحدة تاخد عرض الشاشة بالكامل */
-  }
+
+/* =========================
+   BETTER HERO
+========================= */
+
+.hero-img{
+
+animation:floatImage 4s ease-in-out infinite;
+
 }
 
-/* تحسين الأيقونات الجانبية */
-.side-icons-left {
-  left: 10px; /* أقرب للشاشة */
+@keyframes floatImage{
+
+0%,100%{
+
+transform:translateY(0);
+
 }
-.icon-circle img {
-  filter: none; /* يظهر الأيقونات بألوانها الأصلية */
+
+50%{
+
+transform:translateY(-15px);
+
 }
 
-/* أيقونة التلت شرط */
-.mobile-menu-icon {
-  display: none; /* مخفي افتراضياً */
-  font-size: 28px; /* أصغر وأنيق */
-  cursor: pointer;
-  color: #0b3d91; /* لون الهوية */
-  padding: 10px 18px;
-  border-radius: 6px;
-  background: rgba(240,240,240,0.8); /* خلفية فاتحة شبه شفافة */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
 }
 
-.mobile-menu-icon:hover {
-  background: #d4af37; /* لون ذهبي عند المرور */
-  color: #fff;
-  transform: scale(1.05);
+/* =========================
+   FOOTER ENHANCEMENT
+========================= */
+
+.footer{
+
+position:relative;
+
+overflow:hidden;
+
 }
+
+.footer::before{
+
+content:"";
 
-/* زرار تواصل معنا */
-.contact-btn {
-  background: #0b3d91;
-  color: #fff;
-  padding: 6px 14px; /* متناسق مع التلت شرط */
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+position:absolute;
+
+top:0;
+left:0;
+right:0;
+
+height:4px;
+
+background:
+linear-gradient(
+90deg,
+var(--secondary),
+var(--accent)
+);
+
 }
+
+/* =========================
+   SCROLL BAR
+========================= */
+
+::-webkit-scrollbar{
 
-.contact-btn:hover {
-  background: #082c6c;
+width:10px;
+
 }
+
+::-webkit-scrollbar-track{
+
+background:#e5e7eb;
 
-/* التحكم في الموبايل */
-@media (max-width: 768px) {
-  nav {
-    display: none; /* يخفي القائمة العادية */
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    padding: 15px;
-  }
-  nav.show {
-    display: flex; /* يظهر القائمة لما تدوس على التلت شرط */
-  }
-  .mobile-menu-icon {
-    display: inline-block; /* يظهر التلت شرط على الموبايل */
-  }
 }
+
+::-webkit-scrollbar-thumb{
+
+background:var(--secondary);
+
+border-radius:20px;
 
-@media (max-width: 768px) {
-  .contact-btn {
-    display: none !important; /* يخفي الزرار في الموبايل */
-  }
 }
