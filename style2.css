@@ -503,3 +503,46 @@ html, body {
     display: inline-block; /* يظهر التلت شرط على الموبايل */
   }
 }
+
+/* الهيدر ثابت */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body {
+  padding-top: 120px; /* علشان المحتوى ما يختفيش ورا الهيدر */
+}
+
+/* الموبايل فقط */
+@media (max-width: 768px) {
+  /* زرار تواصل معنا جنب التلت شرط */
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* يبدأ من الشمال */
+    gap: 10px; /* مسافة صغيرة بينهم */
+  }
+  .menu-toggle {
+    display: block; /* يظهر التلت شرط */
+  }
+  .contact-btn {
+    margin-left: 5px; /* يقربها شمال جنب التلت شرط */
+    position: relative;
+    left: 0;
+  }
+
+  /* ضبط الأزرار (آخر الأحداث – انضم الآن) */
+  .cta-buttons {
+    display: flex;
+    justify-content: space-between; /* يخليهم متساويين يمين وشمال */
+    padding: 0 15px; /* نفس المسافة من الناحيتين */
+  }
+
+  /* ضبط البلوك بتاع التلت مراحل */
+  .steps-section {
+    padding: 0 15px; /* نفس المسافة من الناحيتين */
+  }
+}
