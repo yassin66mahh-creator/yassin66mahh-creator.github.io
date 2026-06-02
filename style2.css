@@ -519,30 +519,30 @@ body {
 /* تعديلات الموبايل فقط */
 @media (max-width: 768px) {
   /* زرار تواصل معنا جنب التلت شرط */
-  .nav-container {
+  .main-header .nav-container {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* يبدأ من الشمال */
-    gap: 10px; /* مسافة صغيرة بينهم */
+    gap: 8px; /* مسافة صغيرة بينهم */
   }
-  .menu-toggle {
-    display: block; /* يظهر التلت شرط */
+  .main-header .menu-toggle {
+    display: inline-block; /* يظهر التلت شرط */
   }
-  .contact-btn {
-    margin-left: 5px; /* يقربها شمال جنب التلت شرط */
+  .main-header .contact-btn {
+    margin-left: 0; /* يقربها شمال جنب التلت شرط */
     position: relative;
     left: 0;
   }
 
   /* ضبط الأزرار (آخر الأحداث – انضم الآن) */
-  .cta-buttons {
-    display: flex;
-    justify-content: space-between; /* يخليهم متساويين يمين وشمال */
-    padding: 0 15px; /* نفس المسافة من الناحيتين */
+  .event-card .event-content {
+    padding: 20px 15px; /* نفس المسافة يمين وشمال */
+    box-sizing: border-box;
   }
 
   /* ضبط البلوك بتاع التلت مراحل */
   .steps-section {
-    padding: 0 15px; /* نفس المسافة من الناحيتين */
+    padding: 0 15px; /* نفس المسافة يمين وشمال */
+    box-sizing: border-box;
   }
 }
