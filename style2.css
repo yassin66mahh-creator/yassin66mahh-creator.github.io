@@ -946,3 +946,173 @@ background:var(--secondary);
 border-radius:20px;
 
 }
+
+
+/* =========================
+   EVENTS PAGE
+========================= */
+
+.event-card{
+overflow:hidden;
+position:relative;
+}
+
+.event-img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:16px;
+margin-bottom:20px;
+transition:.4s;
+
+}
+
+.event-card:hover .event-img{
+
+transform:scale(1.05);
+
+}
+
+.event-card h3{
+
+margin-bottom:15px;
+font-size:24px;
+color:var(--primary);
+
+}
+
+.event-card p{
+
+line-height:2;
+font-size:15px;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+display:flex;
+gap:10px;
+margin-top:20px;
+flex-wrap:wrap;
+
+}
+
+.gallery img{
+
+width:90px;
+height:90px;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.1);
+
+}
+
+/* Lightbox */
+
+.lightbox{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+
+background:rgba(0,0,0,.92);
+
+z-index:99999;
+
+justify-content:center;
+align-items:center;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90vh;
+
+border-radius:20px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.4);
+
+animation:zoomIn .3s ease;
+
+}
+
+.close-lightbox{
+
+position:absolute;
+
+top:30px;
+right:40px;
+
+font-size:45px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+@keyframes zoomIn{
+
+from{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+/* Hero Smaller */
+
+.hero.small-hero{
+
+min-height:55vh;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.event-img{
+
+height:220px;
+
+}
+
+.gallery{
+
+justify-content:center;
+
+}
+
+.gallery img{
+
+width:75px;
+height:75px;
+
+}
+
+}
