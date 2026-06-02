@@ -516,13 +516,13 @@ html, body {
   .header-content {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* يبدأ من الشمال */
-    gap: 8px; /* مسافة صغيرة بين التلت شرط وزرار تواصل معنا */
+    justify-content: flex-start; /* كله يبدأ من الشمال */
+    gap: 8px; /* مسافة صغيرة بينهم */
   }
 
-  /* أيقونة التلت شرط */
   .mobile-menu-icon {
-    display: inline-block; /* يظهر على الموبايل */
+    order: 1; /* يخلي التلت شرط الأول */
+    display: inline-block;
     font-size: 22px;
     cursor: pointer;
     color: #0b3d91;
@@ -532,15 +532,16 @@ html, body {
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   }
 
-  /* زرار تواصل معنا جنب التلت شرط */
   .contact-btn {
-    margin-left: 0; /* يقربها شمال */
+    order: 2; /* يخلي تواصل معنا بعد التلت شرط */
+    margin-left: 0;
     padding: 6px 14px;
     border-radius: 6px;
     background: #0b3d91;
     color: #fff;
     font-weight: 600;
   }
+}
 
   nav {
     display: none; /* يخفي القائمة العادية */
