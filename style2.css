@@ -485,22 +485,6 @@ html, body {
 
 /* التحكم في الموبايل */
 @media (max-width: 768px) {
-  .header-content {
-    justify-content: flex-start; /* يبدأ من الشمال */
-    gap: 4px; /* مسافة صغيرة بين التلت شرط وتواصل معنا */
-  }
-
-  .mobile-menu-icon {
-    order: 1;
-    margin-left: 6px; /* مسافة صغيرة من الحافة */
-  }
-
-  .contact-btn {
-    order: 2;
-    margin-left: 0; /* يقربها جنب التلت شرط */
-  }
-}
-    
   nav {
     display: none; /* يخفي القائمة العادية */
     flex-direction: column;
