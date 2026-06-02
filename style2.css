@@ -504,3 +504,56 @@ html, body {
   }
 }
 
+/* الهيدر ثابت */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* التحكم في الموبايل */
+@media (max-width: 768px) {
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* يبدأ من الشمال */
+    gap: 8px; /* مسافة صغيرة بين التلت شرط وزرار تواصل معنا */
+  }
+
+  /* أيقونة التلت شرط */
+  .mobile-menu-icon {
+    display: inline-block; /* يظهر على الموبايل */
+    font-size: 22px;
+    cursor: pointer;
+    color: #0b3d91;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(240,240,240,0.8);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
+  /* زرار تواصل معنا جنب التلت شرط */
+  .contact-btn {
+    margin-left: 0; /* يقربها شمال */
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: #0b3d91;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  nav {
+    display: none; /* يخفي القائمة العادية */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 15px;
+  }
+  nav.show {
+    display: flex; /* يظهر القائمة لما تدوس على التلت شرط */
+  }
+}
