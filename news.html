@@ -1,218 +1,214 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> الاخبار </title>
 
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* الهيدر */
-    .main-header {
-      background: linear-gradient(90deg, #000, #0044cc, #009933);
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    .main-header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .main-header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-    }
+<title>الأخبار | النائب أحمد ياسين حسن</title>
 
-    /* قسم الأخبار */
-    .events-section {
-      padding: 50px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    .event-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-    .event-card:hover {
-      transform: translateY(-8px);
-    }
+<link rel="stylesheet" href="style.css">
 
-    .event-content {
-      padding: 20px;
-    }
-    .event-title {
-      font-size: 1.8rem;
-      margin: 0 0 10px;
-      color: #0044cc;
-    }
-    .event-desc {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    /* معرض الصور داخل كل خبر */
-    .event-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
-    }
-    .event-gallery img {
-      width: 100%;
-      height: auto;          /* مرنة للموبايل */
-      max-height: 350px;     /* حجم مناسب للكمبيوتر */
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .event-gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox-content {
-      position: relative;
-      background: #fff;
-      padding: 10px;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      animation: floatIn 0.4s ease;
-    }
-    .lightbox-content img {
-      max-width: 90vw;
-      max-height: 80vh;
-      border-radius: 10px;
-    }
-    .close-btn {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      font-size: 28px;
-      background: #d4af37;
-      color: #fff;
-      border-radius: 50%;
-      padding: 4px 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    .close-btn:hover {
-      background: #b38e2e;
-    }
-
-    @keyframes floatIn {
-      from { transform: scale(0.8) translateY(30px); opacity: 0; }
-      to { transform: scale(1) translateY(0); opacity: 1; }
-    }
-
-    /* الفوتر */
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- هيدر -->
-  <header class="main-header">
-    <h1>الاخبار</h1>
-    <p>تابع أحدث الفعاليات والأنشطة المميزة</p>
-  </header>
+<header class="header">
 
-  <!-- قسم الأخبار -->
-  <section class="events-section">
+<div class="container header-content">
 
-    <!-- خبر 1 -->
-    <div class="event-card">
-      <div class="event-content">
-        <h2 class="event-title">إفطار رمضاني مع السيد محافظ أسيوط هشام ابو النصر</h2>
-        <p class="event-desc">أُقيم إفطار رمضاني بحضور السيد محافظ أسيوط، وقد شارك فيه أحمد ياسين حسن ضمن الحضور، في أجواء من الود والتواصل التي تعكس روح الشهر الكريم وتعزز العلاقات المجتمعية.</p>
-      </div>
-      <div class="event-gallery">
-        <img src="event1an.jpeg" alt="صورة 1">
-      </div>
-    </div>
+<a href="index.html">
+<img src="logo.png" class="logo">
+</a>
 
-    <!-- خبر 2 -->
-    <div class="event-card">
-      <div class="event-content">
-        <h2 class="event-title">نهائي كأس حزب حماة الوطن بالقاهرة – أسيوط ضد الإسكندرية</h2>
-        <p class="event-desc">أُقيم نهائي كأس حزب حماة الوطن بالقاهرة بين فريقي أسيوط والإسكندرية، حيث تمكن فريق أسيوط من تحقيق الفوز والتتويج بالبطولة، وذلك بحضور أحمد ياسين حسن الذي شارك في فعاليات هذا الحدث الرياضي المميز.</p>
-      </div>
-      <div class="event-gallery">
-        <img src="event2an.jpeg" alt="صورة 1">
-        <img src="event2bn.jpeg" alt="صورة 2">
-      </div>
-    </div>
+<nav>
 
-    <!-- خبر 3 -->
-    <div class="event-card">
-      <div class="event-content">
-        <h2 class="event-title">تهنئه مدير اداره المرور ب منفلوط</h2>
-        <p class="event-desc">يتقدم أحمد ياسين حسن بخالص التهاني لمدير إدارة المرور بمدينه منفلوط بمناسبة توليه المنصب الجديد، متمنيًا له دوام التوفيق والنجاح في خدمة المواطنين وتعزيز منظومة المرور</p>
-      </div>
-      <div class="event-gallery">
-        <img src="event3an.jpeg" alt="صورة 1">
-      </div>
-    </div>
+<a href="index.html">الرئيسية</a>
+<a href="events.html">آخر الأحداث</a>
+<a href="news.html">الأخبار</a>
+<a href="activities.html">الأنشطة</a>
 
-  </section>
+</nav>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-content">
-      <span class="close-btn" onclick="closeLightbox()">×</span>
-      <img id="lightbox-img" src="">
-    </div>
-  </div>
+<a href="join.html" class="contact-btn">
+انضم إلينا
+</a>
 
-  <!-- فوتر -->
-  <footer>
-    <p>©️ 2026 جميع الحقوق محفوظة - الموقع الرسمي للنائب احمد ياسين حسن</p>
-  </footer>
+<div class="mobile-menu-icon" onclick="toggleMenu()">
+☰
+</div>
 
-  <script>
-    // اربط الصور بالـ Lightbox علشان يشتغل على الكمبيوتر والموبايل
-    document.querySelectorAll('.event-gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        document.getElementById("lightbox-img").src = img.src;
-        document.getElementById("lightbox").style.display = "flex";
-      });
-    });
+</div>
 
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
-  </script>
+</header>
+
+<section class="hero small-hero">
+
+<div class="hero-overlay"></div>
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<span class="hero-tag">
+المركز الإعلامي
+</span>
+
+<h1>الأخبار</h1>
+
+<p class="hero-sub">
+تابع آخر الأخبار والتحديثات الرسمية.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="steps">
+
+<div class="container">
+
+<h2>آخر الأخبار</h2>
+
+<div class="nav-grid">
+
+<div class="nav-box event-card">
+
+<img src="event1an.jpeg" class="event-img">
+
+<h3>
+إفطار رمضاني مع محافظ أسيوط
+</h3>
+
+<p>
+أُقيم إفطار رمضاني بحضور السيد محافظ أسيوط هشام أبو النصر وشارك فيه أحمد ياسين حسن.
+</p>
+
+<div class="gallery">
+
+<img src="event1an.jpeg" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+<div class="nav-box event-card">
+
+<img src="event2an.jpeg" class="event-img">
+
+<h3>
+نهائي كأس حزب حماة الوطن
+</h3>
+
+<p>
+فوز فريق أسيوط على الإسكندرية في نهائي كأس حزب حماة الوطن بالقاهرة.
+</p>
+
+<div class="gallery">
+
+<img src="event2an.jpeg" onclick="openImage(this.src)">
+<img src="event2bn.jpeg" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+<div class="nav-box event-card">
+
+<img src="event3an.jpeg" class="event-img">
+
+<h3>
+تهنئة مدير المرور
+</h3>
+
+<p>
+تهنئة مدير إدارة المرور بمدينة منفلوط بمناسبة توليه المنصب الجديد.
+</p>
+
+<div class="gallery">
+
+<img src="event3an.jpeg" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="lightbox" class="lightbox">
+
+<span class="close-lightbox" onclick="closeImage()">
+×
+</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<footer class="footer">
+
+<div class="container footer-content">
+
+<div class="footer-col">
+
+<h3>تواصل معنا</h3>
+
+<p>01066692844</p>
+<p>Ahmedyasseinhassan@gmail.com</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>تابعنا</h3>
+
+<p>واتساب</p>
+<p>فيسبوك</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<div class="credit-bar">
+
+<img src="yassinlogo1.png" class="credit-logo">
+
+<p>
+Designed & Developed By
+<strong>YASSIN EL DEN</strong>
+</p>
+
+</div>
+
+<button id="topBtn">↑</button>
+
+<script>
+
+function toggleMenu(){
+document.querySelector("nav").classList.toggle("show");
+}
+
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
