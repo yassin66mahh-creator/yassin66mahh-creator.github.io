@@ -1336,7 +1336,7 @@ input:focus, textarea:focus {
   z-index: 9999;
 }
 
-/* زرار الرئيسي */
+/* الزر الرئيسي تحت */
 .fab-main {
   width: 55px;
   height: 55px;
@@ -1365,8 +1365,8 @@ input:focus, textarea:focus {
   align-items: center;
   justify-content: center;
   color: white;
-  text-decoration: none;
   font-size: 18px;
+  text-decoration: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 
   opacity: 0;
@@ -1375,35 +1375,19 @@ input:focus, textarea:focus {
   transition: 0.4s;
 }
 
-/* ألوان */
+/* الألوان */
 .whatsapp { background: #25D366; }
 .facebook { background: #1877F2; }
 .call { background: #333; }
 
-/* لما القائمة تفتح */
+/* لما تفتح */
 .fab-container.active .fab-item {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-10px); /* 👈 يطلع لفوق */
   pointer-events: auto;
 }
 
-/* تأخير animation */
-.fab-container.active .whatsapp {
-  transition-delay: 0.05s;
-}
-
-.fab-container.active .facebook {
-  transition-delay: 0.1s;
-}
-
-.fab-container.active .call {
-  transition-delay: 0.15s;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .fab-container {
-    left: 10px;
-    bottom: 15px;
-  }
-}
+/* ترتيب الظهور */
+.fab-container.active .whatsapp { transition-delay: 0.05s; }
+.fab-container.active .facebook { transition-delay: 0.1s; }
+.fab-container.active .call { transition-delay: 0.15s; }
