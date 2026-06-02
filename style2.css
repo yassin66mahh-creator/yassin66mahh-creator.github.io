@@ -518,25 +518,26 @@ body {
 
 /* تعديلات الموبايل فقط */
 @media (max-width: 768px) {
-  /* زرار تواصل معنا جنب التلت شرط */
+  /* التلت شرط + تواصل معنا على الشمال */
   .header-content {
     justify-content: flex-start; /* يبدأ من الشمال */
-    gap: 8px; /* مسافة صغيرة بينهم */
+    gap: 10px; /* مسافة صغيرة بينهم */
   }
   .mobile-menu-icon {
     display: inline-block; /* يظهر التلت شرط */
+    order: 1; /* يخلي التلت شرط أول عنصر */
   }
   .contact-btn {
-    margin-left: 0; /* يقربها شمال جنب التلت شرط */
-    position: relative;
-    left: 0;
+    order: 2; /* يخلي تواصل معنا بعد التلت شرط */
+    margin-left: 0;
   }
 
   /* ضبط الأزرار (آخر الأحداث – انضم الآن) */
   .hero-buttons {
     padding: 0 15px; /* نفس المسافة يمين وشمال */
     box-sizing: border-box;
-    justify-content: space-between; /* يخليهم متساويين */
+    justify-content: space-between; /* يخليهم متساويين يمين وشمال */
+    width: 100%;
   }
 
   /* ضبط البلوك بتاع التلت مراحل */
