@@ -32,22 +32,25 @@ body {
     gap: 6px;
 }
 
-.mobile-menu-icon {
-    order: 1;          /* يخلي التلت شرط أول عنصر */
-    margin-left: 8px;  /* مسافة صغيرة من الحافة الشمال */
-}
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: flex-start; /* يبدأ من الشمال */
+    gap: 4px; /* مسافة صغيرة بين التلت شرط وتواصل معنا */
+  }
 
-.contact-btn {
+  .mobile-menu-icon {
+    order: 1;          /* يخلي التلت شرط أول عنصر */
+    margin-left: 6px;  /* مسافة صغيرة من الحافة الشمال */
+  }
+
+  .contact-btn {
     order: 2;          /* يخلي تواصل معنا بعد التلت شرط */
     margin-left: 0;    /* يقربها جنب التلت شرط */
-}
+  }
 
-.mobile-menu-icon {
-    margin-left: 8px; /* مسافة صغيرة من الحافة الشمال */
-}
-
-.contact-btn {
-    margin-left: 4px; /* مسافة صغيرة بين التلت شرط وتواصل معنا */
+  nav {
+    display: none; /* يخفي القائمة العادية في الموبايل */
+  }
 }
 
 .logo {
