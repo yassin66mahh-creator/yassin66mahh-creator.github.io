@@ -1311,7 +1311,7 @@ input:focus, textarea:focus {
   }
 
   .logo {
-    height: 32px;
+    height: 40px;
   }
 
   .contact-btn {
@@ -1320,7 +1320,7 @@ input:focus, textarea:focus {
   }
 
   .mobile-menu-icon {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
