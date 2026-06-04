@@ -1535,3 +1535,14 @@ background:#14B8A6;
 transform:translateX(-5px);
 
 }
+
+
+.footer a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.footer a:hover{
+color:var(--secondary);
+}
