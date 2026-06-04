@@ -1376,9 +1376,17 @@ input:focus, textarea:focus {
 }
 
 /* الألوان */
-.whatsapp { background: #25D366; }
-.facebook { background: #1877F2; }
-.call { background: #333; }
+.whatsapp{
+background:#1FA855;
+}
+
+.facebook{
+background:#1664D9;
+}
+
+.call{
+background:#F97316;
+}
 
 /* لما تفتح */
 .fab-container.active .fab-item {
@@ -1391,3 +1399,19 @@ input:focus, textarea:focus {
 .fab-container.active .whatsapp { transition-delay: 0.05s; }
 .fab-container.active .facebook { transition-delay: 0.1s; }
 .fab-container.active .call { transition-delay: 0.15s; }
+
+
+.social-btn i,
+.main-btn i{
+
+font-size:24px;
+
+color:white;
+
+}
+
+.main-btn i{
+
+font-size:22px;
+
+}
