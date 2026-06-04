@@ -1500,3 +1500,38 @@ font-size:24px;
 color:white;
 
 }
+
+
+.footer-links{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.footer-links a{
+
+color:white;
+
+text-decoration:none;
+
+padding:10px 15px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+background:#14B8A6;
+
+transform:translateX(-5px);
+
+}
